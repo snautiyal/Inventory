@@ -1,0 +1,1416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="InventoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="BrandId" />
+          </Key>
+          <Property Name="BrandId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BrandDescription" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="datetime" Nullable="false" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CategoryDescription" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="datetime" Nullable="false" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="CategoryBrandMapping">
+          <Key>
+            <PropertyRef Name="CategoryBrandMappingId" />
+          </Key>
+          <Property Name="CategoryBrandMappingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryId" Type="int" />
+          <Property Name="BrandId" Type="int" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Feature">
+          <Key>
+            <PropertyRef Name="FeatureId" />
+          </Key>
+          <Property Name="FeatureId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FeatureName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FeatureDescription" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="datetime" Nullable="false" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Historytransaction">
+          <Key>
+            <PropertyRef Name="HistoryTransactionId" />
+          </Key>
+          <Property Name="HistoryTransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="500" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="datetime" Nullable="false" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="datetime" Nullable="false" />
+          <Property Name="BillNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="VendorID" Type="int" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductDescription" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProductWeight" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="BrandId" Type="int" />
+          <Property Name="CategoryId" Type="int" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="datetime" Nullable="false" />
+          <Property Name="Stock" Type="int" />
+          <Property Name="BarCode" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="StockInPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ThreshHold" Type="int" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="StockingDetails">
+          <Key>
+            <PropertyRef Name="StockingId" />
+          </Key>
+          <Property Name="StockingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="CreationTime" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="StockInPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="BillNo" Type="varchar" MaxLength="50" />
+          <Property Name="VendorId" Type="int" />
+          <Property Name="LastUpdationTime" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Tenant">
+          <Key>
+            <PropertyRef Name="TenantId" />
+          </Key>
+          <Property Name="TenantId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenantName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreationTime" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdationTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="TransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="500" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="datetime" Nullable="false" />
+          <Property Name="StockInPrice" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Userdetails">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaritiualStatus" Type="varchar" MaxLength="50" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VendorName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BillNo" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreationTime" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastUpdationTime" Type="datetime" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <Association Name="FK__CategoryBrandMapping__BrandId">
+          <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+          <End Role="CategoryBrandMapping" Type="Self.CategoryBrandMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="CategoryBrandMapping">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CategoryBrandMapping__CategoryId">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="CategoryBrandMapping" Type="Self.CategoryBrandMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="CategoryBrandMapping">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Item_VendorId">
+          <End Role="Vendor" Type="Self.Vendor" Multiplicity="0..1" />
+          <End Role="Item" Type="Self.Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="Item">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_BrandId">
+          <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_CategoryId">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StockingDetails_ProductId">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="StockingDetails" Type="Self.StockingDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="StockingDetails">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StockingDetails_VendorId">
+          <End Role="Vendor" Type="Self.Vendor" Multiplicity="0..1" />
+          <End Role="StockingDetails" Type="Self.StockingDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="StockingDetails">
+              <PropertyRef Name="VendorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transaction_ProductId">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Transaction">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="AddItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="itemname" Type="nvarchar" Mode="In" />
+          <Parameter Name="itemdescription" Type="nvarchar" Mode="In" />
+          <Parameter Name="itemweight" Type="nvarchar" Mode="In" />
+          <Parameter Name="itemprice" Type="decimal" Mode="In" />
+          <Parameter Name="productid" Type="int" Mode="In" />
+          <Parameter Name="createdby" Type="nvarchar" Mode="In" />
+          <Parameter Name="createdtime" Type="datetime" Mode="In" />
+          <Parameter Name="lastupdby" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastupddt" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="AddTransactions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="amount" Type="decimal" Mode="In" />
+          <Parameter Name="totalamt" Type="decimal" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="productid" Type="int" Mode="In" />
+          <Parameter Name="createdby" Type="nvarchar" Mode="In" />
+          <Parameter Name="createdtime" Type="datetime" Mode="In" />
+          <Parameter Name="lastupdby" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastupddt" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="BrandReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fromdatetime" Type="datetime" Mode="In" />
+          <Parameter Name="todatetime" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="CategorySReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="categoryid" Type="int" Mode="In" />
+          <Parameter Name="productid" Type="int" Mode="In" />
+          <Parameter Name="tenantid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ConsumptionReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="prodcutid" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="datetime" Mode="In" />
+          <Parameter Name="enddate" Type="datetime" Mode="In" />
+          <Parameter Name="tenantId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DelateFeature" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="featureid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DelateItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="itemid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DelateProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DelateTransactions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="transid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DeleteBrand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="brandid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DeleteCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Categoryid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="FetchReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fromdatetime" Type="datetime" Mode="In" />
+          <Parameter Name="todatetime" Type="datetime" Mode="In" />
+          <Parameter Name="tentantid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="fnconsumeproduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="prodcutid" Type="int" Mode="In" />
+          <Parameter Name="tenantId" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="datetime" Mode="In" />
+          <Parameter Name="enddate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="fncrecivedproduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="prodcutid" Type="int" Mode="In" />
+          <Parameter Name="tentid" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="datetime" Mode="In" />
+          <Parameter Name="enddate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="PeriodicReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductId" Type="int" Mode="In" />
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="tenatId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ProductReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fromdatetime" Type="datetime" Mode="In" />
+          <Parameter Name="todatetime" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="SiCategoryReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="categoryid" Type="int" Mode="In" />
+          <Parameter Name="tenantid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="StockingItemsReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="tenantId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="StockingReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductId" Type="int" Mode="In" />
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="tenantId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="StockReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productId" Type="int" Mode="In" />
+          <Parameter Name="tenantId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ThreshHold" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tenantId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="TransactionReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productId" Type="int" Mode="In" />
+          <Parameter Name="fromdatetime" Type="datetime" Mode="In" />
+          <Parameter Name="todatetime" Type="datetime" Mode="In" />
+          <Parameter Name="tenantid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UpdateItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="itemid" Type="int" Mode="In" />
+          <Parameter Name="itemname" Type="nvarchar" Mode="In" />
+          <Parameter Name="itemdescription" Type="nvarchar" Mode="In" />
+          <Parameter Name="itemweight" Type="nvarchar" Mode="In" />
+          <Parameter Name="itemprice" Type="decimal" Mode="In" />
+          <Parameter Name="productid" Type="int" Mode="In" />
+          <Parameter Name="createdby" Type="nvarchar" Mode="In" />
+          <Parameter Name="createdtime" Type="datetime" Mode="In" />
+          <Parameter Name="lastupdby" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastupddt" Type="datetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="InventoryModelStoreContainer">
+          <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoryBrandMapping" EntityType="Self.CategoryBrandMapping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Feature" EntityType="Self.Feature" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Historytransaction" EntityType="Self.Historytransaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StockingDetails" EntityType="Self.StockingDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tenant" EntityType="Self.Tenant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Userdetails" EntityType="Self.Userdetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vendor" EntityType="Self.Vendor" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CategoryBrandMapping__BrandId" Association="Self.FK__CategoryBrandMapping__BrandId">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="CategoryBrandMapping" EntitySet="CategoryBrandMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CategoryBrandMapping__CategoryId" Association="Self.FK__CategoryBrandMapping__CategoryId">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="CategoryBrandMapping" EntitySet="CategoryBrandMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Item_VendorId" Association="Self.FK_Item_VendorId">
+            <End Role="Vendor" EntitySet="Vendor" />
+            <End Role="Item" EntitySet="Item" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_BrandId" Association="Self.FK_Product_BrandId">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_CategoryId" Association="Self.FK_Product_CategoryId">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StockingDetails_ProductId" Association="Self.FK_StockingDetails_ProductId">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="StockingDetails" EntitySet="StockingDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StockingDetails_VendorId" Association="Self.FK_StockingDetails_VendorId">
+            <End Role="Vendor" EntitySet="Vendor" />
+            <End Role="StockingDetails" EntitySet="StockingDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaction_ProductId" Association="Self.FK_Transaction_ProductId">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Transaction" EntitySet="Transaction" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InventoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="BrandId" />
+          </Key>
+          <Property Name="BrandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BrandDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CategoryBrandMappings" Relationship="Self.FK__CategoryBrandMapping__BrandId" FromRole="Brand" ToRole="CategoryBrandMapping" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Product_BrandId" FromRole="Brand" ToRole="Product" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategoryDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CategoryBrandMappings" Relationship="Self.FK__CategoryBrandMapping__CategoryId" FromRole="Category" ToRole="CategoryBrandMapping" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Product__CategoryId" FromRole="Category" ToRole="Product" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CategoryBrandMapping">
+          <Key>
+            <PropertyRef Name="CategoryBrandMappingId" />
+          </Key>
+          <Property Name="CategoryBrandMappingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="Int32" />
+          <Property Name="BrandId" Type="Int32" />
+          <NavigationProperty Name="Brand" Relationship="Self.FK__CategoryBrandMapping__BrandId" FromRole="CategoryBrandMapping" ToRole="Brand" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__CategoryBrandMapping__CategoryId" FromRole="CategoryBrandMapping" ToRole="Category" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Feature">
+          <Key>
+            <PropertyRef Name="FeatureId" />
+          </Key>
+          <Property Name="FeatureId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FeatureName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FeatureDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Historytransaction">
+          <Key>
+            <PropertyRef Name="HistoryTransactionId" />
+          </Key>
+          <Property Name="HistoryTransactionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__Historytr__Produ__29221CFB" FromRole="Historytransaction" ToRole="Product" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BillNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VendorID" Type="Int32" />
+          <NavigationProperty Name="Item1" Relationship="Self.FK_Item_Item" FromRole="Item" ToRole="Item1" />
+          <NavigationProperty Name="Item2" Relationship="Self.FK_Item_Item" FromRole="Item1" ToRole="Item" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_Item_ProductId" FromRole="Item" ToRole="Product" />
+          <NavigationProperty Name="Vendor" Relationship="Self.FK_Item_VendorId" FromRole="Item" ToRole="Vendor" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProductWeight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="BrandId" Type="Int32" />
+          <Property Name="CategoryId" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Stock" Type="Int32" />
+          <Property Name="BarCode" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="StockInPrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ThreshHold" Type="Int32" />
+          <NavigationProperty Name="Brand" Relationship="Self.FK_Product_BrandId" FromRole="Product" ToRole="Brand" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Product__CategoryId" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="Historytransactions" Relationship="Self.FK__Historytr__Produ__29221CFB" FromRole="Product" ToRole="Historytransaction" />
+          <NavigationProperty Name="Items" Relationship="Self.FK_Item_ProductId" FromRole="Product" ToRole="Item" />
+          <NavigationProperty Name="StockingDetails" Relationship="Self.FK__StockingDeatails__ProductId" FromRole="Product" ToRole="StockingDetails" />
+          <NavigationProperty Name="Transactions" Relationship="Self.FK__Transacti__Produ__2645B050" FromRole="Product" ToRole="Transaction" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="StockingDetail">
+          <Key>
+            <PropertyRef Name="StockingId" />
+          </Key>
+          <Property Name="StockingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductId" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="CreationTime" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StockInPrice" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__StockingDeatails__ProductId" FromRole="StockingDetails" ToRole="Product" />
+          <Property Name="BillNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VendorId" Type="Int32" />
+          <NavigationProperty Name="Vendor" Relationship="InventoryModel.FK_StockingDetails_VendorId" FromRole="StockingDetail" ToRole="Vendor" />
+          <Property Name="LastUpdationTime" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="TransactionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="StockInPrice" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__Transacti__Produ__2645B050" FromRole="Transaction" ToRole="Product" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Userdetail">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaritiualStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VendorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BillNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreationTime" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdationTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Items" Relationship="Self.FK_Item_VendorId" FromRole="Vendor" ToRole="Item" />
+          <NavigationProperty Name="StockingDetails" Relationship="InventoryModel.FK_StockingDetails_VendorId" FromRole="Vendor" ToRole="StockingDetail" />
+          <Property Name="TenantId" Type="Int32" />
+        </EntityType>
+        <Association Name="FK__CategoryBrandMapping__BrandId">
+          <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+          <End Role="CategoryBrandMapping" Type="Self.CategoryBrandMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="CategoryBrandMapping">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_BrandId">
+          <End Role="Brand" Type="Self.Brand" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CategoryBrandMapping__CategoryId">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="CategoryBrandMapping" Type="Self.CategoryBrandMapping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="CategoryBrandMapping">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__CategoryId">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Historytr__Produ__29221CFB">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Historytransaction" Type="Self.Historytransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Historytransaction">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Item_Item">
+          <End Role="Item" Type="Self.Item" Multiplicity="1" />
+          <End Role="Item1" Type="Self.Item" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemId" />
+            </Principal>
+            <Dependent Role="Item1">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Item_ProductId">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Item" Type="Self.Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Item">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Item_VendorId">
+          <End Role="Vendor" Type="Self.Vendor" Multiplicity="0..1" />
+          <End Role="Item" Type="Self.Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="Item">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StockingDeatails__ProductId">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="StockingDetails" Type="Self.StockingDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="StockingDetails">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Transacti__Produ__2645B050">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Transaction">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InventoryDb" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Brands" EntityType="Self.Brand" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="CategoryBrandMappings" EntityType="Self.CategoryBrandMapping" />
+          <EntitySet Name="Features" EntityType="Self.Feature" />
+          <EntitySet Name="Historytransactions" EntityType="Self.Historytransaction" />
+          <EntitySet Name="Items" EntityType="Self.Item" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="StockingDetails" EntityType="Self.StockingDetail" />
+          <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+          <EntitySet Name="Userdetails" EntityType="Self.Userdetail" />
+          <EntitySet Name="Vendors" EntityType="Self.Vendor" />
+          <AssociationSet Name="FK__CategoryBrandMapping__BrandId" Association="Self.FK__CategoryBrandMapping__BrandId">
+            <End Role="Brand" EntitySet="Brands" />
+            <End Role="CategoryBrandMapping" EntitySet="CategoryBrandMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_BrandId" Association="Self.FK_Product_BrandId">
+            <End Role="Brand" EntitySet="Brands" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CategoryBrandMapping__CategoryId" Association="Self.FK__CategoryBrandMapping__CategoryId">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="CategoryBrandMapping" EntitySet="CategoryBrandMappings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__CategoryId" Association="Self.FK__Product__CategoryId">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Historytr__Produ__29221CFB" Association="Self.FK__Historytr__Produ__29221CFB">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Historytransaction" EntitySet="Historytransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Item_Item" Association="Self.FK_Item_Item">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="Item1" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Item_ProductId" Association="Self.FK_Item_ProductId">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Item" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Item_VendorId" Association="Self.FK_Item_VendorId">
+            <End Role="Vendor" EntitySet="Vendors" />
+            <End Role="Item" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StockingDeatails__ProductId" Association="Self.FK__StockingDeatails__ProductId">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="StockingDetails" EntitySet="StockingDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Transacti__Produ__2645B050" Association="Self.FK__Transacti__Produ__2645B050">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Transaction" EntitySet="Transactions" />
+          </AssociationSet>
+          <FunctionImport Name="AddItems">
+            <Parameter Name="itemname" Mode="In" Type="String" />
+            <Parameter Name="itemdescription" Mode="In" Type="String" />
+            <Parameter Name="itemweight" Mode="In" Type="String" />
+            <Parameter Name="itemprice" Mode="In" Type="Decimal" />
+            <Parameter Name="productid" Mode="In" Type="Int32" />
+            <Parameter Name="createdby" Mode="In" Type="String" />
+            <Parameter Name="createdtime" Mode="In" Type="DateTime" />
+            <Parameter Name="lastupdby" Mode="In" Type="String" />
+            <Parameter Name="lastupddt" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="AddTransactions">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="amount" Mode="In" Type="Decimal" />
+            <Parameter Name="totalamt" Mode="In" Type="Decimal" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="productid" Mode="In" Type="Int32" />
+            <Parameter Name="createdby" Mode="In" Type="String" />
+            <Parameter Name="createdtime" Mode="In" Type="DateTime" />
+            <Parameter Name="lastupdby" Mode="In" Type="String" />
+            <Parameter Name="lastupddt" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="BrandReport" ReturnType="Collection(InventoryModel.BrandReport_Result)">
+            <Parameter Name="fromdatetime" Mode="In" Type="DateTime" />
+            <Parameter Name="todatetime" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="CategorySReport" ReturnType="Collection(InventoryModel.CategorySReport_Result)">
+            <Parameter Name="categoryid" Mode="In" Type="Int32" />
+            <Parameter Name="productid" Mode="In" Type="Int32" />
+            <Parameter Name="tenantid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ConsumptionReport" ReturnType="Collection(InventoryModel.ConsumptionReport_Result)">
+            <Parameter Name="prodcutid" Mode="In" Type="Int32" />
+            <Parameter Name="startdate" Mode="In" Type="DateTime" />
+            <Parameter Name="enddate" Mode="In" Type="DateTime" />
+            <Parameter Name="tenantId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DelateFeature">
+          <Parameter Name="featureid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DelateItems">
+          <Parameter Name="itemid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DelateProduct">
+          <Parameter Name="productid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DelateTransactions">
+          <Parameter Name="transid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteBrand">
+          <Parameter Name="brandid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteCategory">
+          <Parameter Name="Categoryid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="FetchReport" ReturnType="Collection(InventoryModel.FetchReport_Result)">
+            <Parameter Name="fromdatetime" Mode="In" Type="DateTime" />
+            <Parameter Name="todatetime" Mode="In" Type="DateTime" />
+            <Parameter Name="tentantid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PeriodicReport" ReturnType="Collection(InventoryModel.PeriodicReport_Result)">
+            <Parameter Name="ProductId" Mode="In" Type="Int32" />
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="tenatId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ProductReport" ReturnType="Collection(InventoryModel.ProductReport_Result)">
+            <Parameter Name="fromdatetime" Mode="In" Type="DateTime" />
+            <Parameter Name="todatetime" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SiCategoryReport" ReturnType="Collection(InventoryModel.SiCategoryReport_Result)">
+            <Parameter Name="categoryid" Mode="In" Type="Int32" />
+            <Parameter Name="tenantid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="StockingItemsReport" ReturnType="Collection(InventoryModel.StockingItemsReport_Result)">
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="tenantId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="StockingReport" ReturnType="Collection(InventoryModel.StockingReport_Result)">
+            <Parameter Name="ProductId" Mode="In" Type="Int32" />
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="tenantId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="StockReport" ReturnType="Collection(InventoryModel.StockReport_Result)">
+            <Parameter Name="productId" Mode="In" Type="Int32" />
+            <Parameter Name="tenantId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ThreshHold" ReturnType="Collection(InventoryModel.ThreshHold_Result)" >
+          <Parameter Name="tenantId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="TransactionReport" ReturnType="Collection(InventoryModel.TransactionReport_Result)">
+            <Parameter Name="productId" Mode="In" Type="Int32" />
+            <Parameter Name="fromdatetime" Mode="In" Type="DateTime" />
+            <Parameter Name="todatetime" Mode="In" Type="DateTime" />
+            <Parameter Name="tenantid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateItems">
+            <Parameter Name="itemid" Mode="In" Type="Int32" />
+            <Parameter Name="itemname" Mode="In" Type="String" />
+            <Parameter Name="itemdescription" Mode="In" Type="String" />
+            <Parameter Name="itemweight" Mode="In" Type="String" />
+            <Parameter Name="itemprice" Mode="In" Type="Decimal" />
+            <Parameter Name="productid" Mode="In" Type="Int32" />
+            <Parameter Name="createdby" Mode="In" Type="String" />
+            <Parameter Name="createdtime" Mode="In" Type="DateTime" />
+            <Parameter Name="lastupdby" Mode="In" Type="String" />
+            <Parameter Name="lastupddt" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <AssociationSet Name="FK_StockingDetails_VendorId" Association="InventoryModel.FK_StockingDetails_VendorId">
+            <End Role="Vendor" EntitySet="Vendors" />
+            <End Role="StockingDetail" EntitySet="StockingDetails" />
+          </AssociationSet>
+          <EntitySet Name="Tenants" EntityType="InventoryModel.Tenant" />
+        </EntityContainer>
+        <ComplexType Name="BrandReport_Result">
+          <Property Type="Int32" Name="BrandId" Nullable="false" />
+          <Property Type="String" Name="BrandName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="BrandDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="CreationTime" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LastUpdatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="LastUpdationTime" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="CategorySReport_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BrandName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Count" Nullable="true" />
+          <Property Type="String" Name="ProductDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ProductWeight" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="ProductPrice" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="CreationTime" Nullable="false" Precision="23" />
+          <Property Type="Decimal" Name="BarCode" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="ConsumptionReport_Result">
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Recived" Nullable="true" />
+          <Property Type="Int32" Name="Consume" Nullable="true" />
+          <Property Type="Int32" Name="Remain" Nullable="false" />
+          <Property Type="Decimal" Name="Cost" Nullable="true" Precision="29" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="FetchReport_Result">
+          <Property Type="Int32" Name="ItemId" Nullable="false" />
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="Int32" Name="Count" Nullable="false" />
+          <Property Type="String" Name="CreationTime" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="PeriodicReport_Result">
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="OpeningStock" Nullable="true" />
+          <Property Type="Int32" Name="ClosingStock" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="ProductReport_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProductDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ProductWeight" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="ProductPrice" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="BrandId" Nullable="true" />
+          <Property Type="Int32" Name="CategoryId" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="CreationTime" Nullable="false" Precision="23" />
+          <Property Type="Decimal" Name="BarCode" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="SiCategoryReport_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BrandName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Count" Nullable="true" />
+          <Property Type="String" Name="ProductDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ProductWeight" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="ProductPrice" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="CreationTime" Nullable="false" Precision="23" />
+          <Property Type="Decimal" Name="BarCode" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="StockingItemsReport_Result">
+          <Property Type="String" Name="Prductname" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="OpeningStock" Nullable="true" />
+          <Property Type="Int32" Name="stockIn" Nullable="true" />
+          <Property Type="Int32" Name="TotalTransaction" Nullable="true" />
+          <Property Type="Int32" Name="ClosingStock" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="StockingReport_Result">
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="OpeningStock" Nullable="true" />
+          <Property Type="Int32" Name="StockIn" Nullable="true" />
+          <Property Type="Int32" Name="TotalTransaction" Nullable="true" />
+          <Property Type="Int32" Name="ClosingStock" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="StockReport_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BrandName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Count" Nullable="true" />
+          <Property Type="String" Name="ProductDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ProductWeight" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="ProductPrice" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="CreationTime" Nullable="false" Precision="23" />
+          <Property Type="Decimal" Name="BarCode" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="ThreshHold_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ProductDescription" Nullable="true" MaxLength="200" />
+          <Property Type="Int32" Name="ThreshHold" Nullable="true" />
+          <Property Type="Int32" Name="Count" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="TransactionReport_Result">
+          <Property Type="Int32" Name="TransactionId" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="StockInPrice" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="count" Nullable="false" />
+          <Property Type="Decimal" Name="ProductPrice" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="TotalAmount" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="creationTime" Nullable="false" Precision="23" />
+        </ComplexType>
+        <Association Name="FK_StockingDetails_VendorId">
+          <End Type="InventoryModel.Vendor" Role="Vendor" Multiplicity="0..1" />
+          <End Type="InventoryModel.StockingDetail" Role="StockingDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="StockingDetail">
+              <PropertyRef Name="VendorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Tenant">
+          <Key>
+            <PropertyRef Name="TenantId" />
+          </Key>
+          <Property Name="TenantId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenantName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreationTime" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdationTime" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InventoryModelStoreContainer" CdmEntityContainer="InventoryDb">
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="InventoryModel.Brand">
+              <MappingFragment StoreEntitySet="Brand">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="BrandDescription" ColumnName="BrandDescription" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="InventoryModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryDescription" ColumnName="CategoryDescription" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoryBrandMappings">
+            <EntityTypeMapping TypeName="InventoryModel.CategoryBrandMapping">
+              <MappingFragment StoreEntitySet="CategoryBrandMapping">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="CategoryBrandMappingId" ColumnName="CategoryBrandMappingId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Features">
+            <EntityTypeMapping TypeName="InventoryModel.Feature">
+              <MappingFragment StoreEntitySet="Feature">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="FeatureId" ColumnName="FeatureId" />
+                <ScalarProperty Name="FeatureName" ColumnName="FeatureName" />
+                <ScalarProperty Name="FeatureDescription" ColumnName="FeatureDescription" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Historytransactions">
+            <EntityTypeMapping TypeName="InventoryModel.Historytransaction">
+              <MappingFragment StoreEntitySet="Historytransaction">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="HistoryTransactionId" ColumnName="HistoryTransactionId" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="InventoryModel.Item">
+              <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+                <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="InventoryModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="ProductWeight" ColumnName="ProductWeight" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+                <ScalarProperty Name="StockInPrice" ColumnName="StockInPrice" />
+                <ScalarProperty Name="ThreshHold" ColumnName="ThreshHold" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockingDetails">
+            <EntityTypeMapping TypeName="InventoryModel.StockingDetail">
+              <MappingFragment StoreEntitySet="StockingDetails">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+                <ScalarProperty Name="VendorId" ColumnName="VendorId" />
+                <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+                <ScalarProperty Name="StockingId" ColumnName="StockingId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="StockInPrice" ColumnName="StockInPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="InventoryModel.Transaction">
+              <MappingFragment StoreEntitySet="Transaction">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+                <ScalarProperty Name="StockInPrice" ColumnName="StockInPrice" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Userdetails">
+            <EntityTypeMapping TypeName="InventoryModel.Userdetail">
+              <MappingFragment StoreEntitySet="Userdetails">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="MaritiualStatus" ColumnName="MaritiualStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="InventoryModel.Vendor">
+              <MappingFragment StoreEntitySet="Vendor">
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AddItems" FunctionName="InventoryModel.Store.AddItems" />
+          <FunctionImportMapping FunctionImportName="AddTransactions" FunctionName="InventoryModel.Store.AddTransactions" />
+          <FunctionImportMapping FunctionImportName="BrandReport" FunctionName="InventoryModel.Store.BrandReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.BrandReport_Result">
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="BrandDescription" ColumnName="BrandDescription" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CategorySReport" FunctionName="InventoryModel.Store.CategorySReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.CategorySReport_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="ProductWeight" ColumnName="ProductWeight" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ConsumptionReport" FunctionName="InventoryModel.Store.ConsumptionReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.ConsumptionReport_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Recived" ColumnName="Recived" />
+                <ScalarProperty Name="Consume" ColumnName="Consume" />
+                <ScalarProperty Name="Remain" ColumnName="Remain" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DelateFeature" FunctionName="InventoryModel.Store.DelateFeature" />
+          <FunctionImportMapping FunctionImportName="DelateItems" FunctionName="InventoryModel.Store.DelateItems" />
+          <FunctionImportMapping FunctionImportName="DelateProduct" FunctionName="InventoryModel.Store.DelateProduct" />
+          <FunctionImportMapping FunctionImportName="DelateTransactions" FunctionName="InventoryModel.Store.DelateTransactions" />
+          <FunctionImportMapping FunctionImportName="DeleteBrand" FunctionName="InventoryModel.Store.DeleteBrand" />
+          <FunctionImportMapping FunctionImportName="DeleteCategory" FunctionName="InventoryModel.Store.DeleteCategory" />
+          <FunctionImportMapping FunctionImportName="FetchReport" FunctionName="InventoryModel.Store.FetchReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.FetchReport_Result">
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PeriodicReport" FunctionName="InventoryModel.Store.PeriodicReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.PeriodicReport_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="OpeningStock" ColumnName="OpeningStock" />
+                <ScalarProperty Name="ClosingStock" ColumnName="ClosingStock" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ProductReport" FunctionName="InventoryModel.Store.ProductReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.ProductReport_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="ProductWeight" ColumnName="ProductWeight" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SiCategoryReport" FunctionName="InventoryModel.Store.SiCategoryReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.SiCategoryReport_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="ProductWeight" ColumnName="ProductWeight" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="StockingItemsReport" FunctionName="InventoryModel.Store.StockingItemsReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.StockingItemsReport_Result">
+                <ScalarProperty Name="Prductname" ColumnName="Prductname" />
+                <ScalarProperty Name="OpeningStock" ColumnName="OpeningStock" />
+                <ScalarProperty Name="stockIn" ColumnName="stockIn" />
+                <ScalarProperty Name="TotalTransaction" ColumnName="TotalTransaction" />
+                <ScalarProperty Name="ClosingStock" ColumnName="ClosingStock" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="StockingReport" FunctionName="InventoryModel.Store.StockingReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.StockingReport_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="OpeningStock" ColumnName="OpeningStock" />
+                <ScalarProperty Name="StockIn" ColumnName="StockIn" />
+                <ScalarProperty Name="TotalTransaction" ColumnName="TotalTransaction" />
+                <ScalarProperty Name="ClosingStock" ColumnName="ClosingStock" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="StockReport" FunctionName="InventoryModel.Store.StockReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.StockReport_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="ProductWeight" ColumnName="ProductWeight" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ThreshHold" FunctionName="InventoryModel.Store.ThreshHold">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.ThreshHold_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="ThreshHold" ColumnName="ThreshHold" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="TransactionReport" FunctionName="InventoryModel.Store.TransactionReport">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventoryModel.TransactionReport_Result">
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="StockInPrice" ColumnName="StockInPrice" />
+                <ScalarProperty Name="count" ColumnName="count" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="creationTime" ColumnName="creationTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UpdateItems" FunctionName="InventoryModel.Store.UpdateItems" />
+          <EntitySetMapping Name="Tenants">
+            <EntityTypeMapping TypeName="InventoryModel.Tenant">
+              <MappingFragment StoreEntitySet="Tenant">
+                <ScalarProperty Name="LastUpdationTime" ColumnName="LastUpdationTime" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="TenantName" ColumnName="TenantName" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

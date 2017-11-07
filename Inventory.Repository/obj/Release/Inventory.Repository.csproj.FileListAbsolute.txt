@@ -1,0 +1,56 @@
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\bin\Release\Inventory.Repository.dll
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\bin\Release\Inventory.Repository.pdb
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\bin\Release\EntityFramework.dll
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\bin\Release\Inventory.Domain.dll
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\bin\Release\Inventory.Domain.pdb
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\bin\Release\EntityFramework.xml
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\obj\Release\Inventory.Repository.csprojResolveAssemblyReference.cache
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\obj\Release\Inventory.Repository.dll
+C:\Users\user\documents\visual studio 2013\Projects\Inventory\Inventory.Repository\obj\Release\Inventory.Repository.pdb
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\bin\Release\Inventory.Repository.dll
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\bin\Release\Inventory.Repository.pdb
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\bin\Release\EntityFramework.dll
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\bin\Release\EntityFramework.SqlServer.dll
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\bin\Release\Inventory.Domain.dll
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\bin\Release\Inventory.Domain.pdb
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\bin\Release\EntityFramework.xml
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\bin\Release\EntityFramework.SqlServer.xml
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\obj\Release\Inventory.Repository.csprojResolveAssemblyReference.cache
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\obj\Release\Inventory.Repository.dll
+E:\Ingen\HMBS\Account\Development\Code\Inventory\Inventory.Repository\obj\Release\Inventory.Repository.pdb
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\bin\Release\Inventory.Repository.dll
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\bin\Release\Inventory.Repository.pdb
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\bin\Release\EntityFramework.dll
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\bin\Release\EntityFramework.SqlServer.dll
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\bin\Release\Inventory.Domain.dll
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\bin\Release\Inventory.Domain.pdb
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\bin\Release\EntityFramework.xml
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\bin\Release\EntityFramework.SqlServer.xml
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.csprojResolveAssemblyReference.cache
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.dll
+E:\yha\trunk\Account\Development\Code\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.pdb
+E:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Repository.dll
+E:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Repository.pdb
+E:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\EntityFramework.dll
+E:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\EntityFramework.SqlServer.dll
+E:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Domain.dll
+E:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Domain.pdb
+E:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\EntityFramework.xml
+E:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\EntityFramework.SqlServer.xml
+E:\bakcupapi\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.csprojResolveAssemblyReference.cache
+E:\bakcupapi\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.dll
+E:\bakcupapi\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.pdb
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Repository.dll
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Repository.pdb
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\EntityFramework.dll
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\EntityFramework.SqlServer.dll
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Domain.dll
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Domain.pdb
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\Inventory.Domain.dll.config
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\EntityFramework.xml
+D:\bakcupapi\Inventroy\Inventory.Repository\bin\Release\EntityFramework.SqlServer.xml
+D:\bakcupapi\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.csprojResolveAssemblyReference.cache
+D:\bakcupapi\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.dll
+D:\bakcupapi\Inventroy\Inventory.Repository\obj\Release\Inventory.Repository.pdb

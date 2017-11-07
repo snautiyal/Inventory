@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @{
+        var baseUrl = string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"));
+    }
+    <!--Set the comman link-->
+    <script>
+        var PATH = new Object();
+        PATH.BASE_URL = "@baseUrl";
+    </script>
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    @*@Styles.Render("~/Content/bootstrapCss")*@
+
+    <!--Include Template Css -->
+    @Styles.Render("~/Content/Css/Metro/css/MetroCss")
+    <!--Include Cooman Css -->
+    @Styles.Render("~/Content/Css/CoomanCss")
+    <!--Include Template Css -->
+    @Styles.Render("~/Content/Css/font-awesome/css/FontAwesome")
+
+
+    <!--Include js-->
+    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    <!--Include Template Js -->
+    @Scripts.Render("~/bundles/MetroJs")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+</head>
+<!-- Fadebox for loader-->
+<div id="fadebox" style="display:none">
+    <div id="form-loader" class=""></div>
+</div>
+<body class="bg-steel">
+    <!--Add Header file-->
+    @Html.Partial("PartialHeader")
+    <div class="cell auto-size padding20 bg-white" id="cell-content">
+        @RenderBody()
+    </div>
+    <!--Add Footer file-->
+    @Html.Partial("PartialFooter")
+</body>
+</html>

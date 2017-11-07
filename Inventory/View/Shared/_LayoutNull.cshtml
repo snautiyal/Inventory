@@ -1,0 +1,10 @@
+﻿<Html>
+    <head>
+        @Styles.Render("~/Content/MetroCss")
+        @RenderSection("scripts", required: false)
+    </head>
+    @RenderBody()
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/MetroJs")
+@Scripts.Render("~/bundles/jqueryval")
+</Html>

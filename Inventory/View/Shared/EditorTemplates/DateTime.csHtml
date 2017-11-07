@@ -1,0 +1,7 @@
+@model Nullable<DateTime>
+@{
+    
+    var value = String.Format("{0:dd/MMM/yyyy}", Model);
+    
+}
+@Html.TextBox("", value, new { @class = "form-control dateControl", type = "text", @readonly = "readonly"})

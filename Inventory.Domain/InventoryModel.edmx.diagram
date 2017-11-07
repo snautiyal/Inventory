@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="16fd380ab4e243f49c3fb0bf49bbd1d6" Name="Diagram1">
+        <EntityTypeShape EntityType="InventoryModel.Brand" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Category" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.CategoryBrandMapping" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Feature" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Historytransaction" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Item" Width="1.5" PointX="11.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Product" Width="1.5" PointX="6" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.StockingDetail" Width="1.5" PointX="8.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Transaction" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Userdetail" Width="1.5" PointX="2.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Vendor" Width="1.5" PointX="9" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="InventoryModel.FK__CategoryBrandMapping__BrandId" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Product_BrandId" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK__CategoryBrandMapping__CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK__Product__CategoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK__Historytr__Produ__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Item_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Item_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Item_VendorId" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK__StockingDeatails__ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK__Transacti__Produ__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_StockingDetails_VendorId" />
+        <EntityTypeShape EntityType="InventoryModel.Tenant" Width="1.5" PointX="3.375" PointY="2.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

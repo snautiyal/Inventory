@@ -1,0 +1,260 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Inventory.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1.0" />--%>
+   <title><%: Page.Title %>Inventory System</title>
+
+    <script></script>
+    <asp:PlaceHolder runat="server">
+
+        <%--<%: Scripts.Render("~/bundles/modernizr") %>--%>
+
+
+    </asp:PlaceHolder>
+    <%--<webopt:bundlereference runat="server" path="~/Content/css" />--%>
+    <%--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="~/js/jquery-1.8.3.js"></script>
+    <script src="~/js/jquery.meanmenu.js"></script>
+    <link href="~/Styles/responsiveMenu.css" rel="stylesheet" />
+    <link href="~/Styles/meanmenu.css" rel="stylesheet" />--%>
+
+    <%--////////////////////Bundle/////////////////////////--%>
+    
+    <link href="Content/Css/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="Content/Css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="Scripts/Js/jquery.dataTables.min.js"></script>
+
+    <script src="Scripts/Js/docs.js"></script>
+    <script src="Scripts/Js/ga.js"></script>
+    <script src="Scripts/Js/prettify/run_prettify.js"></script>
+
+    <script src="Scripts/Js/metro.js"></script>
+    <link href="Content/Css/Metro/css/media.css" rel="stylesheet" />
+    <link href="Content/Css/Metro/css/metro-icons.css" rel="stylesheet" />
+    <link href="Content/Css/Metro/css/metro-responsive.css" rel="stylesheet" />
+    <link href="Content/Css/Metro/css/metro-schemes.css" rel="stylesheet" />
+    <link href="Content/Css/Metro/css/metro.css" rel="stylesheet" />
+
+
+  
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 15%;
+        }
+    </style>
+
+
+  
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+    <%-- Menu items--%>
+    <%-- <asp:menu ID="Menu" runat="server" CssClass="menu">
+     <items>
+         <asp:menuitem NavigateUrl="#" Text="Category"></asp:menuitem>
+         <asp:menuitem NavigateUrl="#" Text="Product"></asp:menuitem>
+         <asp:menuitem NavigateUrl="#" Text="Brand"></asp:menuitem>
+         <asp:menuitem NavigateUrl="#" Text="Items"></asp:menuitem>
+         <asp:menuitem NavigateUrl="#" Text="Features"></asp:menuitem>
+         <asp:menuitem NavigateUrl="#" Text="Transaction"></asp:menuitem>
+         <asp:menuitem NavigateUrl="#" Text="History"></asp:menuitem>
+     </items>
+ </asp:menu>--%>
+    <div class="app-bar fixed-top darcula" data-role="appbar" style="background-color: #34af80">
+        <a class="app-bar-element branding" href="#">
+            <asp:Image ID="Image1" runat="server" />
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/logo.png" Height="80%" class="logo-custom" />
+        </a>
+    <span class="app-bar-divider"></span>
+    <ul class="app-bar-menu">
+        <li><a style="font-weight: bold; font-size: large">WELCOME TO YHA DELHI</a></li>
+        <li>
+            <a href="" class="dropdown-toggle"></a>
+            <ul class="d-menu" data-role="dropdown">
+                <li><a href="">New project</a></li>
+                <li class="divider"></li>
+                <li>
+                    <a href="" class="dropdown-toggle">Reopen</a>
+                    <ul class="d-menu" data-role="dropdown">
+                        <li><a href="">Project 1</a></li>
+                        <li><a href="">Project 2</a></li>
+                        <li><a href="">Project 3</a></li>
+                        <li class="divider"></li>
+                        <li><a href="">Clear list</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li style="text-align: center"><p></p></li>
+        
+    </ul>
+        
+    <div class="app-bar-element place-right">
+    <li>  <a href="http://localhost:49594/Login/Logout.aspx" style="color: #FFFFFF"><span class="mif-user">Logout</span></a></li>
+        <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" data-role="dropdown" data-no-close="true" style="width: 220px">
+            <ul class="unstyled-list fg-dark">
+                <li><a href="" class="fg-white1 fg-hover-yellow"><span class="mif-cog">&nbspProfile</span></a></li>
+                <li><a href="" class="fg-white2 fg-hover-yellow"><span class="mif-security">&nbspSecurity</span></a></li>
+                <li><a href="" class="fg-white3 fg-hover-yellow"><span class="mif-exit">&nbspExit</span></a></li>
+                <li><a href="" class="fg-white3 fg-hover-yellow"><span class="mif-exit">Logout</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="page-content" style="width:100%;height:100%">
+    <div class="flex-grid no-responsive-future" style="height: 100%; width: 100%;">
+        <div class="row" style="height: auto;width:100%; background-color: #34af80;">
+            <div class="cell size-x200" id="cell-sidebar" style="background-color: #34af80; height: auto; width:20%">
+                <ul class="sidebar">
+                   <li >
+                        <a href="http://localhost:49594/Modules/Search/Search">
+                            <span class="mif-search icon"></span>
+                            <span class="title">Search</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="http://localhost:49594/Modules/Category/category">
+                            <span class="mif-menu icon"></span>
+                            <span class="title">Category</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="http://localhost:49594/Modules/Product/Product">
+                            <span class="mif-cart icon"></span>
+                            <span class="title">Product</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:49594/Modules/Brand/Brand">
+                            <span class="mif-tags icon"></span>
+                            <span class="title">Brand</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="http://localhost:49594/Modules/Vendor/Vendor">
+                            <span class="mif-tags icon"></span>
+                            <span class="title">Vendor</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:49594/Modules/Item/Item">
+                            <span class="mif-stack3 icon"></span>
+                            <span class="title">Items</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:49594/Modules/Feature/Feature">
+                            <span class="mif-layers icon"></span>
+                            <span class="title">Features</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:49594/Modules/Transaction/Transaction">
+                            <span class="fa fa-inr icon"></span>
+                            <span class="title">Transaction</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>
+                   <%-- <li>
+                        <a href="http://localhost:49594/Modules/Historytransaction/Historytransaction">
+                            <span class="mif-history icon"></span>
+                            <span class="title">History</span>
+                            <span class="counter"></span>
+                        </a>
+                    </li>--%>
+                    <li>
+                        <a href="http://localhost:49594/Report/report">
+                            <span class="mif-file-text icon"></span>
+                            <span class="title">Report</span>
+                            <span class="counter"></span>
+                        </a>
+                      
+                    </li>
+
+                     <li>
+                        <a href="http://localhost:49594/Modules/Thershhold/Thresh">
+                            <span class="mif-warning icon"></span>
+                            <span class="title">ThreshHold</span>
+                            <span class="counter"></span>
+                        </a>
+                      
+                    </li>
+                    <li>
+                        <a href="#">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        </a>
+                    </li>
+
+                </ul>
+                  
+        </div>
+          
+            <div class="cell auto-size padding20 bg-white" id="cell-content" style="width:80%">
+      
+		        <asp:ContentPlaceHolder ID="MainContent" runat="server" >
+                    </asp:ContentPlaceHolder>
+
+            </div>
+        </div>
+    </div>
+</div>
+            <hr />
+                 
+            <footer>
+              <%-- ///////////// Footer//////////////////--%>
+            </footer>
+       
+    </form>
+    
+</body>
+</html>
+
+<script>
+    $(function () {
+        var pgurl = window.location.href;//.substr(window.location.href
+   //.lastIndexOf("/") + 1);
+        $("#cell-sidebar ul li a").each(function () {
+            if ($(this).attr("href") == pgurl || $(this).attr("href") == '')
+                $(this).parent().addClass("active");
+        })
+    });
+
+</script>

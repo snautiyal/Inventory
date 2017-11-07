@@ -1,0 +1,120 @@
+﻿
+.Grid {
+    background-color: #fff;
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+    font-family: Calibri;
+    color: #474747;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .Grid td {
+        padding: 2px;
+        border: solid 1px #c1c1c1;
+        font-size: 15pt;
+        font-family: Calibri;
+        text-align: left;
+        border-style: none;
+    }
+
+    .Grid tr {
+        height: 10px;
+    }
+
+    .Grid th {
+        padding: 15px 2px;
+        color: #fff;
+        background: #267226 repeat-x top;
+        border-left: solid 1px #525252;
+        font-size: 0.9em;
+        font-size: 15pt;
+        font-family: Calibri;
+        text-align: left;
+    }
+
+    .Grid input {
+        font-size: 15pt;
+        font-family: Calibri;
+        text-align: left;
+    }
+
+.Edit {
+    background: yellow url() repeat-x top;
+}
+
+.Editbutton {
+    background-color: #92CD00 !important;
+   color:#fcfcfc !important;
+}
+
+.Deletebutton {
+    background-color: red !important;
+   color:#fcfcfc !important;
+}
+.Updatebutton {
+    background-color: #006400 !important;
+   color:#fcfcfc !important;
+}
+
+.Cancelbutton {
+    background-color: Red !important;
+   color:#fcfcfc !important;
+}
+
+.Addbutton {
+    background-color: #92CD00 !important;
+   color:Green !important;
+}
+.buttonprimary{
+    background: #60a917 none repeat scroll 0 0 ;
+    border-color: #60a917;
+    border-radius: 4px;
+    
+    border: 1px solid #d9d9d9;
+    color: #fff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+   
+    line-height: 2;
+    margin: 0.15625rem 0;
+    outline: medium none;
+    padding: 0 1rem;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    }
+.Grid .alt {
+    background: #fcfcfc url(../../Images/grid-alt.png) repeat-x top;
+}
+
+.Grid .pgr {
+    background: green url() repeat-x top;
+}
+
+    .Grid .pgr table {
+        margin: 10px 0;
+    }
+
+    .Grid .pgr td {
+        border-width: 0;
+        padding: 0 6px;
+        border-left: solid 1px #666;
+        font-weight: bold;
+        color: #fff;
+        line-height: 1px;
+    }
+
+    .Grid .pgr a {
+        color: Gray;
+        text-decoration: none;
+    }
+
+        .Grid .pgr a:hover {
+            color: #000;
+            text-decoration: none;
+        }

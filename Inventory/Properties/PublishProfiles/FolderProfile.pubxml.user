@@ -1,0 +1,1679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_NewBackgroundProfile>False</_NewBackgroundProfile>
+    <_PublishTargetUrl>F:\InventoyManali</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="About.aspx">
+      <publishTime>10/06/2015 10:58:33</publishTime>
+    </File>
+    <File Include="Account/AddPhoneNumber.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/Confirm.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/Forgot.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/Lockout.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/Login.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/Manage.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/ManageLogins.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/ManagePassword.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/OpenAuthProviders.ascx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/Register.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/RegisterExternalLogin.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/ResetPassword.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/ResetPasswordConfirmation.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/TwoFactorAuthenticationSignIn.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/VerifyPhoneNumber.aspx">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="Account/Web.config">
+      <publishTime>10/06/2015 10:58:50</publishTime>
+    </File>
+    <File Include="AutoCompleteService1.asmx">
+      <publishTime>10/30/2015 10:46:33</publishTime>
+    </File>
+    <File Include="BillDataSet.xsc">
+      <publishTime>12/21/2015 16:24:55</publishTime>
+    </File>
+    <File Include="BillDataSet.xss">
+      <publishTime>12/21/2015 16:24:55</publishTime>
+    </File>
+    <File Include="BillReport/Bill.aspx">
+      <publishTime>01/27/2016 15:20:44</publishTime>
+    </File>
+    <File Include="BillReport/Bill.Designer.cs">
+      <publishTime>02/16/2016 12:05:08</publishTime>
+    </File>
+    <File Include="BillReport/Bill.xsc">
+      <publishTime>02/16/2016 11:41:37</publishTime>
+    </File>
+    <File Include="BillReport/Bill.xsd">
+      <publishTime>02/16/2016 12:05:08</publishTime>
+    </File>
+    <File Include="BillReport/Bill.xss">
+      <publishTime>02/16/2016 11:41:34</publishTime>
+    </File>
+    <File Include="BillReport/bills.rdlc">
+      <publishTime>07/20/2017 12:04:19</publishTime>
+    </File>
+    <File Include="BillReport/memo.rdlc">
+      <publishTime>01/27/2016 15:43:19</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>10/06/2015 10:58:38</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
+      <publishTime>10/06/2015 10:58:39</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>12/02/2015 12:17:08</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>12/02/2015 12:17:08</publishTime>
+    </File>
+    <File Include="bin/Inventory.dll">
+      <publishTime>09/14/2017 11:16:29</publishTime>
+    </File>
+    <File Include="bin/Inventory.Domain.dll">
+      <publishTime>09/14/2017 11:16:27</publishTime>
+    </File>
+    <File Include="bin/Inventory.Domain.dll.config">
+      <publishTime>08/08/2017 13:32:53</publishTime>
+    </File>
+    <File Include="bin/Inventory.Repository.dll">
+      <publishTime>09/14/2017 11:16:28</publishTime>
+    </File>
+    <File Include="bin/keystore.json">
+      <publishTime>01/07/2016 17:31:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>10/06/2015 10:58:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>10/06/2015 10:58:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>10/06/2015 10:58:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>10/06/2015 10:58:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>10/06/2015 10:58:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>10/06/2015 10:58:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>10/06/2015 10:58:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>10/06/2015 10:58:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>10/06/2015 10:58:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>10/06/2015 10:58:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>10/06/2015 10:58:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>10/06/2015 10:58:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>10/06/2015 10:58:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>10/06/2015 10:58:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>10/04/2013 17:38:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.ProcessingObjectModel.dll">
+      <publishTime>10/04/2013 17:38:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.DLL">
+      <publishTime>10/04/2013 17:38:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Types.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>10/06/2015 10:58:41</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>12/02/2015 12:17:34</publishTime>
+    </File>
+    <File Include="bin/OnBarcode.Barcode.ASPNET.dll">
+      <publishTime>10/22/2014 09:40:10</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>10/06/2015 10:58:54</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x64/msvcr100.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x64/SqlServerSpatial110.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x86/msvcr100.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x86/SqlServerSpatial110.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>02/10/2017 19:20:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>10/06/2015 10:58:39</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>10/06/2015 10:58:53</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>02/10/2017 19:20:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>02/10/2017 19:20:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>02/10/2017 19:20:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>02/10/2017 19:20:17</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>10/06/2015 10:58:38</publishTime>
+    </File>
+    <File Include="Bundle.config">
+      <publishTime>10/17/2015 14:45:48</publishTime>
+    </File>
+    <File Include="Citrus/CitrusPayment.aspx">
+      <publishTime>01/26/2016 05:51:17</publishTime>
+    </File>
+    <File Include="Citrus/keystore.json">
+      <publishTime>01/07/2016 17:27:16</publishTime>
+    </File>
+    <File Include="Citrus/notifyResponsePage.aspx">
+      <publishTime>01/12/2016 11:02:45</publishTime>
+    </File>
+    <File Include="Citrus/ResponsePage.aspx">
+      <publishTime>01/18/2016 13:04:07</publishTime>
+    </File>
+    <File Include="Contact.aspx">
+      <publishTime>10/06/2015 10:58:33</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/.bower.json">
+      <publishTime>08/13/2015 11:50:04</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/.gitignore">
+      <publishTime>08/13/2015 11:50:04</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/.npmignore">
+      <publishTime>08/13/2015 11:50:02</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/bower.json">
+      <publishTime>08/13/2015 11:50:00</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/css/font-awesome.css">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/css/font-awesome.min.css">
+      <publishTime>09/01/2015 16:10:36</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/HELP-US-OUT.txt">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/animated.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/bordered-pulled.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/core.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/extras.less">
+      <publishTime>08/13/2015 11:50:30</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/fixed-width.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/font-awesome.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/icons.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/larger.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/list.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/mixins.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/path.less">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/rotated-flipped.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/spinning.less">
+      <publishTime>08/13/2015 11:50:22</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/stacked.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/less/variables.less">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/font-awesome.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_animated.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_bordered-pulled.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_core.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_extras.scss">
+      <publishTime>08/13/2015 11:50:46</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_fixed-width.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_icons.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_larger.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_list.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_mixins.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_path.scss">
+      <publishTime>09/01/2015 16:10:34</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_rotated-flipped.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_spinning.scss">
+      <publishTime>08/13/2015 11:50:38</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_stacked.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/font-awesome/scss/_variables.scss">
+      <publishTime>09/01/2015 16:10:32</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/css/media.css">
+      <publishTime>11/16/2015 16:14:56</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/css/metro-icons.css">
+      <publishTime>11/16/2015 16:14:35</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/css/metro-responsive.css">
+      <publishTime>07/29/2015 05:47:02</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/css/metro-schemes.css">
+      <publishTime>07/29/2015 05:47:02</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/css/metro.css">
+      <publishTime>12/31/2015 13:39:32</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/fonts/metro.eot">
+      <publishTime>07/29/2015 05:47:02</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/fonts/metro.svg">
+      <publishTime>07/29/2015 05:47:02</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/fonts/metro.ttf">
+      <publishTime>07/29/2015 05:47:02</publishTime>
+    </File>
+    <File Include="Content/Css/Metro/fonts/metro.woff">
+      <publishTime>07/29/2015 05:47:02</publishTime>
+    </File>
+    <File Include="Content/Images/loader.gif">
+      <publishTime>08/13/2015 11:55:34</publishTime>
+    </File>
+    <File Include="Content/Images/logo.png">
+      <publishTime>08/20/2015 10:55:16</publishTime>
+    </File>
+    <File Include="css/jquery-ui.css">
+      <publishTime>03/17/2017 17:21:50</publishTime>
+    </File>
+    <File Include="css/jquery.autocomplete.css">
+      <publishTime>04/27/2016 15:18:45</publishTime>
+    </File>
+    <File Include="css/reset.css">
+      <publishTime>01/11/2016 17:52:08</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>01/11/2016 17:50:06</publishTime>
+    </File>
+    <File Include="dbperiodic.xsc">
+      <publishTime>12/12/2015 17:29:57</publishTime>
+    </File>
+    <File Include="dbperiodic.xss">
+      <publishTime>12/12/2015 17:29:57</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>02/01/2017 17:14:56</publishTime>
+    </File>
+    <File Include="dsStockReport.xsc">
+      <publishTime>12/11/2015 11:15:05</publishTime>
+    </File>
+    <File Include="dsStockReport.xss">
+      <publishTime>12/11/2015 11:15:05</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>10/06/2015 10:58:33</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>10/06/2015 10:58:38</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>10/06/2015 10:58:38</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>10/06/2015 10:58:38</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>10/06/2015 10:58:38</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/06/2015 10:58:33</publishTime>
+    </File>
+    <File Include="GridCss/Gridstyle.css">
+      <publishTime>01/28/2016 19:07:56</publishTime>
+    </File>
+    <File Include="HMBS/HMBS.config">
+      <publishTime>01/06/2016 12:37:43</publishTime>
+    </File>
+    <File Include="HMBS/Ratio.xsc">
+      <publishTime>01/06/2016 18:03:49</publishTime>
+    </File>
+    <File Include="HMBS/Ratio.xss">
+      <publishTime>01/06/2016 18:03:49</publishTime>
+    </File>
+    <File Include="HMBS/Report.aspx">
+      <publishTime>01/06/2016 17:51:51</publishTime>
+    </File>
+    <File Include="HMBS/Status.xsc">
+      <publishTime>01/06/2016 13:20:56</publishTime>
+    </File>
+    <File Include="HMBS/Status.xss">
+      <publishTime>01/06/2016 13:20:53</publishTime>
+    </File>
+    <File Include="Images/add.jpg">
+      <publishTime>10/31/2015 11:49:17</publishTime>
+    </File>
+    <File Include="Images/add1.jpg">
+      <publishTime>12/17/2015 17:47:39</publishTime>
+    </File>
+    <File Include="Images/cancel.jpg">
+      <publishTime>12/17/2015 16:57:12</publishTime>
+    </File>
+    <File Include="Images/card.png">
+      <publishTime>01/11/2016 11:37:28</publishTime>
+    </File>
+    <File Include="Images/checkout.png">
+      <publishTime>12/19/2015 18:43:14</publishTime>
+    </File>
+    <File Include="Images/del.jpg">
+      <publishTime>12/17/2015 15:44:03</publishTime>
+    </File>
+    <File Include="Images/del1.jpg">
+      <publishTime>12/17/2015 15:44:41</publishTime>
+    </File>
+    <File Include="Images/del3.png">
+      <publishTime>12/17/2015 16:58:06</publishTime>
+    </File>
+    <File Include="Images/delete-icon-md.png">
+      <publishTime>02/02/2016 13:27:26</publishTime>
+    </File>
+    <File Include="Images/Delete.png">
+      <publishTime>12/29/2012 16:57:38</publishTime>
+    </File>
+    <File Include="Images/edit.png">
+      <publishTime>12/17/2015 16:00:15</publishTime>
+    </File>
+    <File Include="Images/grid-alt.png">
+      <publishTime>03/03/2008 16:23:50</publishTime>
+    </File>
+    <File Include="Images/grid-header.png">
+      <publishTime>12/25/2013 17:08:37</publishTime>
+    </File>
+    <File Include="Images/grid-pgr.png">
+      <publishTime>12/28/2013 13:01:52</publishTime>
+    </File>
+    <File Include="Images/icon-Cancel.png">
+      <publishTime>04/08/2013 17:05:16</publishTime>
+    </File>
+    <File Include="Images/icon-edit.png">
+      <publishTime>04/08/2013 17:04:36</publishTime>
+    </File>
+    <File Include="Images/icon-update.png">
+      <publishTime>04/08/2013 16:59:34</publishTime>
+    </File>
+    <File Include="Images/invoice.png">
+      <publishTime>12/23/2015 18:45:44</publishTime>
+    </File>
+    <File Include="Images/k6514681.png">
+      <publishTime>05/11/2016 16:01:54</publishTime>
+    </File>
+    <File Include="Images/k65146811.jpg">
+      <publishTime>05/11/2016 15:51:04</publishTime>
+    </File>
+    <File Include="Images/logo.png">
+      <publishTime>10/17/2015 14:32:46</publishTime>
+    </File>
+    <File Include="Images/print.png">
+      <publishTime>05/11/2016 16:01:54</publishTime>
+    </File>
+    <File Include="Images/printButton.gif">
+      <publishTime>12/29/2015 14:52:09</publishTime>
+    </File>
+    <File Include="Images/print_button.gif">
+      <publishTime>12/29/2015 14:51:04</publishTime>
+    </File>
+    <File Include="Images/update.png">
+      <publishTime>12/17/2015 16:56:44</publishTime>
+    </File>
+    <File Include="inventoryDataSet.xsc">
+      <publishTime>12/02/2015 12:37:33</publishTime>
+    </File>
+    <File Include="inventoryDataSet.xss">
+      <publishTime>12/02/2015 12:37:33</publishTime>
+    </File>
+    <File Include="js/index.js">
+      <publishTime>01/11/2016 15:30:33</publishTime>
+    </File>
+    <File Include="js/jquery-1.12.4.js">
+      <publishTime>03/02/2017 17:41:15</publishTime>
+    </File>
+    <File Include="js/jquery-1.8.3.js">
+      <publishTime>10/17/2015 11:56:11</publishTime>
+    </File>
+    <File Include="js/jquery-ui.js">
+      <publishTime>03/02/2017 17:39:30</publishTime>
+    </File>
+    <File Include="js/jquery.meanmenu.js">
+      <publishTime>10/17/2015 11:50:21</publishTime>
+    </File>
+    <File Include="js/jquery.validate.min.js">
+      <publishTime>01/28/2016 15:41:03</publishTime>
+    </File>
+    <File Include="Login/Login.aspx">
+      <publishTime>03/15/2017 15:34:59</publishTime>
+    </File>
+    <File Include="Login/Logout.aspx">
+      <publishTime>03/15/2017 12:19:50</publishTime>
+    </File>
+    <File Include="master/master.aspx">
+      <publishTime>10/16/2015 16:54:23</publishTime>
+    </File>
+    <File Include="master/Master.Master">
+      <publishTime>10/16/2015 17:49:30</publishTime>
+    </File>
+    <File Include="Modules/Brand/Brand.aspx">
+      <publishTime>03/15/2017 11:21:27</publishTime>
+    </File>
+    <File Include="Modules/Category/category.aspx">
+      <publishTime>03/15/2017 11:56:25</publishTime>
+    </File>
+    <File Include="Modules/Feature/Feature.aspx">
+      <publishTime>03/15/2017 11:24:06</publishTime>
+    </File>
+    <File Include="Modules/Historytransaction/Historytransaction.aspx">
+      <publishTime>03/15/2017 11:24:38</publishTime>
+    </File>
+    <File Include="Modules/Item/Item.aspx">
+      <publishTime>09/12/2017 13:53:10</publishTime>
+    </File>
+    <File Include="Modules/Product/Product.aspx">
+      <publishTime>09/11/2017 18:33:09</publishTime>
+    </File>
+    <File Include="Modules/Search/Search.aspx">
+      <publishTime>09/12/2017 11:48:21</publishTime>
+    </File>
+    <File Include="Modules/Thershhold/Thresh.aspx">
+      <publishTime>08/10/2017 11:20:30</publishTime>
+    </File>
+    <File Include="Modules/Transaction/Transaction.aspx">
+      <publishTime>09/12/2017 16:30:16</publishTime>
+    </File>
+    <File Include="Modules/Transaction/TransactionR.rdlc">
+      <publishTime>05/13/2016 12:05:10</publishTime>
+    </File>
+    <File Include="Modules/Transaction/TransactionR.xsc">
+      <publishTime>05/10/2016 15:21:09</publishTime>
+    </File>
+    <File Include="Modules/Transaction/TransactionR.xss">
+      <publishTime>05/10/2016 15:20:37</publishTime>
+    </File>
+    <File Include="Modules/Vendor/Vendor.aspx">
+      <publishTime>08/31/2017 16:59:04</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/21/2017 13:54:50</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/BYNetWinConfig/BYNetPortAPI.dll">
+      <publishTime>01/07/2014 10:57:00</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/BYNetWinConfig/BYNetWinConfig.exe">
+      <publishTime>01/07/2014 15:44:50</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/BYNetWinConfig/BYNetWinConfig_CN.chm">
+      <publishTime>01/03/2014 14:00:50</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/BYNetWinConfig/BYNetWinConfig_EN.chm">
+      <publishTime>01/06/2014 16:30:30</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/BYNetWinConfig/LogConfig001.ini">
+      <publishTime>02/06/2013 14:54:50</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/BYNetWinConfig/NetSetting.ini">
+      <publishTime>11/24/2014 14:14:13</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/BYNetWinConfig/SimpleLogModule.dll">
+      <publishTime>12/13/2013 15:31:52</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/1257.font">
+      <publishTime>10/10/2013 16:53:56</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/12x24.font">
+      <publishTime>10/10/2013 16:53:56</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/3.2.10 Page 16 %28WPC1252%297x9.font">
+      <publishTime>10/10/2013 16:53:56</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/3.2.10 Page 16 %28WPC1252%299x9.font">
+      <publishTime>10/10/2013 16:53:56</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/3.2.13 Page 19 %28PC858Euro%297x9.font">
+      <publishTime>10/10/2013 16:53:56</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/771.font">
+      <publishTime>10/10/2013 16:53:56</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/9x17.font">
+      <publishTime>10/10/2013 16:53:57</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/Impact/PC1251_9x12.font">
+      <publishTime>10/10/2013 16:53:57</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/CodePage/Thermal/PC437_12x24.font">
+      <publishTime>10/10/2013 16:53:56</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/EepromSet/44444444444.pes">
+      <publishTime>02/21/2014 15:00:46</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/EepromSet/5555555.pes">
+      <publishTime>02/21/2014 15:01:52</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/EepromSet/aaaaaaa.pes">
+      <publishTime>02/21/2014 15:48:23</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/EepromSet/asd.pes">
+      <publishTime>11/24/2014 13:24:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/EepromSet/bbbbb.pes">
+      <publishTime>02/21/2014 15:51:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/EepromSet/zxc.pes">
+      <publishTime>11/24/2014 13:29:11</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/BackSideMessage.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/bitmap.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/bmpdither.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/BYNetIO.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/BYNetPortAPI Guide.chm">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/BYNetPortAPI.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/ByUsbInt.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/ComStatusMonitor.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/DLPORTIO.DLL">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/DLPORTIO.SYS">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/FrontSideMessage.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/ImageFormatTrans.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/ImageZoom.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/ImageZoom1.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/Logo.jpg">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/NibblePAR.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/PreDefinedData.dll">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/ReprintMessage.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/start.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/start_invalid.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/stop.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/stop_invalid.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/Thumbs.db">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/lib/Utility.BY">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Bird.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Bird2.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/camphor.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/cat.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/chicken.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/chicken2.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/cobra.bmp">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Dragon.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/FACE.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Fish.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Fish2.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Fish3.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Fish4.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/flower.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Flowerpot.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/gHard13.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/gHard20.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/Central Logo.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/FACE.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/flower.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/Lion.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/LionTemp.bmp.bin">
+      <publishTime>06/09/2014 14:21:24</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/miss you.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/Rabbit.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/SAMPLE.BMP">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Impact/Thumbs.db">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Lion.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/miss you0.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/mouse.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/mouse2.bmp">
+      <publishTime>10/10/2013 16:53:34</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/mouse3.bmp">
+      <publishTime>10/10/2013 16:53:34</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/mouse4.bmp">
+      <publishTime>10/10/2013 16:53:34</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/pangolin.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/pangolin2.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Perfect 15.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Perfect 19.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Perfect 2.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Perfect 4.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Rabbit.bmp">
+      <publishTime>10/10/2013 16:53:34</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/SAMPLE.BMP">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/snake.bmp">
+      <publishTime>10/10/2013 16:53:38</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/1_criedshy.bmp">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/1_criedshy.JPG">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/1_focuswe.bmp">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/1_focuswe.jpg">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/1_focusweTemp.bmp.bmp">
+      <publishTime>02/22/2014 08:02:25</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/1_focusweTemp.bmpTemp.bmp.bin">
+      <publishTime>09/19/2014 11:45:54</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/1_orangebeelzebub.jpg">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/2_f3333cjh.bmp">
+      <publishTime>02/22/2014 08:17:45</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/2_f3333cjh.JPG">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/demo.exe">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/ED91.jpg">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/FACE.bmp">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/flower.bmp">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/flowerTemp.bmp.bmp">
+      <publishTime>02/22/2014 08:07:11</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/Lion.bmp">
+      <publishTime>02/22/2014 08:05:56</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/miss you.bmp">
+      <publishTime>02/22/2014 08:06:14</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/panda.bmp">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/panda.JPG">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/Rabbit.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/SAMPLE.BMP">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thermal/Thumbs.db">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Thumbs.db">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Water lilies.bmp">
+      <publishTime>10/10/2013 16:53:37</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/waterfall.bmp">
+      <publishTime>10/10/2013 16:53:35</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Xxmas06.bmp">
+      <publishTime>10/10/2013 16:53:36</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Xxmas13.bmp">
+      <publishTime>10/10/2013 16:53:34</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/logo/Xxmas14.bmp">
+      <publishTime>10/10/2013 16:53:34</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Par1284.sys">
+      <publishTime>10/10/2013 16:53:31</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/par1284.vxd">
+      <publishTime>10/10/2013 16:53:39</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Pre-Defined/Dragon.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Pre-Defined/Thumbs.db">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Pre-Defined/Water lilies.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Pre-Defined/waterfall.bmp">
+      <publishTime>10/10/2013 16:53:32</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Printer.ini">
+      <publishTime>11/24/2014 18:10:28</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/1_Supermarket.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/2Color/1_Supermarket_2Color.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/AutoBitmap/1_Auto Bitmap Printing.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/1_UPC-A.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/2_UPC-E.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/3_EAN-13.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/4_EAN-8.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/5_CODE39.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/6_ITF.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/7_CODABAR.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/8_CODE93.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/9_CODE128.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/a_PDF417.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/b_MAXICODE.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/c_QR.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Barcode/d_GS1.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Gray/1_Gray.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/Monochromatic/1_Monochromatic.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/RightSideUp/1_Supermarket_RightSideUp.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/SavePaper/1_Not save paper.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/SavePaper/2_25%25 save paper.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/SavePaper/3_50%25 save paper.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/SavePaper/4_75%25 save paper.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/SavePaper/5_100%25 save paper.prn">
+      <publishTime>10/10/2013 16:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/WaterMark/1_Watermark_blowup.prn">
+      <publishTime>10/10/2013 16:51:10</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/WaterMark/2_Watermark_45degree.prn">
+      <publishTime>10/10/2013 16:51:10</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3150/WaterMark/3_Watermark_145degree.prn">
+      <publishTime>10/10/2013 16:51:10</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/1_Supermarket.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/2Color/1_Supermarket_2Color.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/1_UPC-A.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/2_UPC-E.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/3_EAN-13.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/4_EAN-8.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/5_CODE39.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/6_ITF.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/7_CODABAR.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/8_CODE93.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/9_CODE128.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/a_PDF417.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/b_MAXICODE.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/c_QR.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Barcode/d_GS1.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Gray/1_Gray.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/MiddlePrint/1_45mm width print.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/MiddlePrint/2_56mm width print.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/MiddlePrint/3_76mm width print.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/MiddlePrint/4_80mm width print.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/Monochromatic/1_Monochromatic.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/RightSideUp/1_Supermarket_RightSideUp.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/SavePaper/1_Not save paper.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/SavePaper/2_25%25 save paper.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/SavePaper/3_50%25 save paper.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/SavePaper/4_75%25 save paper.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/SavePaper/5_100%25 save paper.prn">
+      <publishTime>10/10/2013 16:51:06</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/WaterMark/1_Watermark_blowup.prn">
+      <publishTime>10/10/2013 16:51:07</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/WaterMark/2_Watermark_45degree.prn">
+      <publishTime>10/10/2013 16:51:07</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/Predefined/RP3310/WaterMark/3_Watermark_145degree.prn">
+      <publishTime>10/10/2013 16:51:07</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Sample/User defined/4-4..prn">
+      <publishTime>07/08/2014 11:39:54</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver/autoinstall.bat">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver/bypusb.cat">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver/BYPUSB.INF">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver/BYPUSB.sys">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver/Install.exe">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver_x64/autoinstall.bat">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver_x64/bypusb.cat">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver_x64/BYPUSB.INF">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver_x64/BYPUSB.sys">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/USBDrv/USBDriver_x64/Install.exe">
+      <publishTime>10/10/2013 16:51:18</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/user-defined font/Thermal/12x24.font">
+      <publishTime>10/10/2013 16:51:16</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/user-defined font/Thermal/9x17.font">
+      <publishTime>10/10/2013 16:51:16</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Utility.exe">
+      <publishTime>11/24/2014 13:28:51</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/UtilityHelp.chm">
+      <publishTime>11/25/2014 08:51:09</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/01.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/02.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/03.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/04.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/05.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/06.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/07.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/08.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/09.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/10.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/11.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/12.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/13.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/14.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/15.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/16.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/17.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/18.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/19.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/20.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/21.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/22.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/23.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/Chinese/24.wav">
+      <publishTime>10/10/2013 16:51:05</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/01.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/02.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/03.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/04.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/05.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/06.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/07.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/08.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/09.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/10.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/11.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/12.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/13.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/14.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/15.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/16.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/17.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/18.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/19.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/20.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/21.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/22.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/23.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="PrinterUtility V1.0/Wav/English/24.wav">
+      <publishTime>10/10/2013 16:51:04</publishTime>
+    </File>
+    <File Include="Report/brand.xsc">
+      <publishTime>12/09/2015 18:27:00</publishTime>
+    </File>
+    <File Include="Report/brand.xss">
+      <publishTime>12/09/2015 18:27:00</publishTime>
+    </File>
+    <File Include="Report/Consumption.rdlc">
+      <publishTime>03/01/2017 13:03:06</publishTime>
+    </File>
+    <File Include="Report/DataSetConsumption.xsc">
+      <publishTime>02/23/2017 18:53:55</publishTime>
+    </File>
+    <File Include="Report/DataSetConsumption.xss">
+      <publishTime>02/23/2017 18:53:55</publishTime>
+    </File>
+    <File Include="Report/Item.xsc">
+      <publishTime>12/02/2015 13:06:44</publishTime>
+    </File>
+    <File Include="Report/Item.xss">
+      <publishTime>12/02/2015 13:06:44</publishTime>
+    </File>
+    <File Include="Report/Periodic.rdlc">
+      <publishTime>12/15/2015 11:09:43</publishTime>
+    </File>
+    <File Include="Report/Product.xsc">
+      <publishTime>12/05/2015 16:32:50</publishTime>
+    </File>
+    <File Include="Report/Product.xss">
+      <publishTime>12/05/2015 16:32:50</publishTime>
+    </File>
+    <File Include="Report/report.aspx">
+      <publishTime>03/15/2017 11:35:55</publishTime>
+    </File>
+    <File Include="Report/Report1.rdlc">
+      <publishTime>01/29/2016 15:34:09</publishTime>
+    </File>
+    <File Include="Report/Report2.rdlc">
+      <publishTime>12/05/2015 17:15:44</publishTime>
+    </File>
+    <File Include="Report/Report3.rdlc">
+      <publishTime>12/14/2015 10:58:03</publishTime>
+    </File>
+    <File Include="Report/Stock.xsc">
+      <publishTime>04/29/2016 16:25:28</publishTime>
+    </File>
+    <File Include="Report/Stock.xss">
+      <publishTime>04/29/2016 16:25:13</publishTime>
+    </File>
+    <File Include="Report/Stocking.rdlc">
+      <publishTime>02/05/2016 11:44:41</publishTime>
+    </File>
+    <File Include="Report/StockingItems.rdlc">
+      <publishTime>02/05/2016 11:47:20</publishTime>
+    </File>
+    <File Include="Report/StockReport.rdlc">
+      <publishTime>03/01/2017 12:54:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>08/17/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>08/17/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>03/01/2017 13:23:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>08/17/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>08/17/2015 11:21:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.3.2.min.js">
+      <publishTime>04/27/2016 15:17:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min.js">
+      <publishTime>04/27/2016 15:17:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.css">
+      <publishTime>10/09/2014 00:19:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.min.js">
+      <publishTime>10/09/2014 00:00:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.autocomplete.js">
+      <publishTime>04/27/2016 15:17:42</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>10/08/2014 23:59:06</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>08/17/2015 11:21:42</publishTime>
+    </File>
+    <File Include="Scripts/Js/docs.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/ga.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/jquery.dataTables.min.js">
+      <publishTime>08/17/2015 12:25:44</publishTime>
+    </File>
+    <File Include="Scripts/Js/metro.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-apollo.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-basic.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-clj.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-css.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-dart.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-erlang.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-go.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-hs.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-lisp.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-llvm.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-lua.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-matlab.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-ml.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-mumps.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-n.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-pascal.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-proto.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-r.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-rd.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-scala.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-sql.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-tcl.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-tex.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-vb.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-vhdl.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-wiki.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-xq.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/lang-yaml.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/prettify.css">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/prettify.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/Js/prettify/run_prettify.js">
+      <publishTime>10/24/2015 08:41:50</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>08/17/2015 11:21:42</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>08/17/2015 11:21:42</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>08/17/2015 11:21:42</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/DetailsView.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Focus.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/GridView.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Menu.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MenuStandards.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjax.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxApplicationServices.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxComponentModel.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxCore.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxGlobalization.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxHistory.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxNetwork.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxSerialization.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxTimer.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebForms.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebServices.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/SmartNav.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/TreeView.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebForms.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebParts.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebUIValidation.js">
+      <publishTime>10/06/2015 10:58:40</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>03/02/2017 17:40:50</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>09/12/2017 16:48:36</publishTime>
+    </File>
+    <File Include="Site.Mobile.Master">
+      <publishTime>10/06/2015 10:58:49</publishTime>
+    </File>
+    <File Include="SqlServerTypes/readme.htm">
+      <publishTime>07/21/2017 13:54:50</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x64/msvcr100.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x64/SqlServerSpatial110.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x86/msvcr100.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x86/SqlServerSpatial110.dll">
+      <publishTime>02/13/2014 09:53:40</publishTime>
+    </File>
+    <File Include="StockingDataSet.xsc">
+      <publishTime>12/15/2015 15:58:34</publishTime>
+    </File>
+    <File Include="StockingDataSet.xss">
+      <publishTime>12/15/2015 15:58:34</publishTime>
+    </File>
+    <File Include="StockingItemsDataSet.xsc">
+      <publishTime>12/16/2015 15:50:49</publishTime>
+    </File>
+    <File Include="StockingItemsDataSet.xss">
+      <publishTime>12/16/2015 15:50:49</publishTime>
+    </File>
+    <File Include="Styles/meanmenu.css">
+      <publishTime>10/17/2015 11:56:11</publishTime>
+    </File>
+    <File Include="Styles/responsiveMenu.css">
+      <publishTime>10/17/2015 12:46:53</publishTime>
+    </File>
+    <File Include="Styles/style1.css">
+      <publishTime>01/12/2016 11:02:20</publishTime>
+    </File>
+    <File Include="thermalprinter/Default.aspx">
+      <publishTime>02/10/2016 17:06:47</publishTime>
+    </File>
+    <File Include="ViewSwitcher.ascx">
+      <publishTime>10/06/2015 10:58:49</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/14/2017 11:16:30</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

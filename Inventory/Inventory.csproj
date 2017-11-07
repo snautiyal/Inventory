@@ -1,0 +1,1348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F64CE456-F1AD-4CF6-92AC-B3D08F617068}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventory</RootNamespace>
+    <AssemblyName>Inventory</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.11.0.1\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OnBarcode.Barcode.ASPNET, Version=6.0.0.41022, Culture=neutral, PublicKeyToken=a775cebcbc8b82dd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\OnBarcode.Barcode.ASPNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\msvcr100.dll">
+      <Link>SqlServerTypes\x64\msvcr100.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\msvcr100.dll">
+      <Link>SqlServerTypes\x86\msvcr100.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <None Include="App_WebReferences\Service\configuration.svcinfo" />
+    <None Include="App_WebReferences\Service\configuration91.svcinfo" />
+    <None Include="App_WebReferences\Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="App_WebReferences\Service\Service.disco" />
+    <Content Include="AutoCompleteService1.asmx" />
+    <Content Include="BillReport\Bill.aspx" />
+    <Content Include="bin\OnBarcode.Barcode.ASPNET.dll" />
+    <Content Include="Citrus\CitrusPayment.aspx" />
+    <Content Include="Citrus\notifyResponsePage.aspx" />
+    <Content Include="Citrus\ResponsePage.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\Css\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\Css\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\Css\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Content\Css\Metro\css\media.css" />
+    <Content Include="Content\Css\Metro\css\metro-icons.css" />
+    <Content Include="Content\Css\Metro\css\metro-responsive.css" />
+    <Content Include="Content\Css\Metro\css\metro-schemes.css" />
+    <Content Include="Content\Css\Metro\css\metro.css" />
+    <Content Include="Content\Images\loader.gif" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.autocomplete.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\style.css" />
+    <Content Include="GridCss\Gridstyle.css" />
+    <Content Include="HMBS\Report.aspx" />
+    <Content Include="Images\add.jpg" />
+    <Content Include="Images\add1.jpg" />
+    <Content Include="Images\cancel.jpg" />
+    <Content Include="Images\card.png" />
+    <Content Include="Images\checkout.png" />
+    <Content Include="Images\del.jpg" />
+    <Content Include="Images\del1.jpg" />
+    <Content Include="Images\del3.png" />
+    <Content Include="Images\delete-icon-md.png" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\grid-alt.png" />
+    <Content Include="Images\grid-header.png" />
+    <Content Include="Images\grid-pgr.png" />
+    <Content Include="Images\icon-Cancel.png" />
+    <Content Include="Images\icon-edit.png" />
+    <Content Include="Images\icon-update.png" />
+    <Content Include="Images\invoice.png" />
+    <Content Include="Images\k6514681.png" />
+    <Content Include="Images\k65146811.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\print.png" />
+    <Content Include="Images\printButton.gif" />
+    <Content Include="Images\print_button.gif" />
+    <Content Include="Images\update.png" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jquery-1.12.4.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="Login\Logout.aspx" />
+    <Content Include="Modules\Brand\Brand.aspx" />
+    <Content Include="Modules\Category\category.aspx" />
+    <Content Include="Modules\Feature\Feature.aspx" />
+    <Content Include="js\jquery-1.8.3.js" />
+    <Content Include="js\jquery.meanmenu.js" />
+    <Content Include="master\master.aspx" />
+    <Content Include="Modules\Historytransaction\Historytransaction.aspx" />
+    <Content Include="Modules\Item\Item.aspx" />
+    <Content Include="Modules\Search\Search.aspx" />
+    <Content Include="Modules\Transaction\Transaction.aspx" />
+    <Content Include="Modules\Vendor\Vendor.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <None Include="App_WebReferences\Service\Service.wsdl" />
+    <None Include="App_WebReferences\Service\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_WebReferences\Service\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_WebReferences\Service\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_WebReferences\Service\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Content\Css\font-awesome\.bower.json" />
+    <Content Include="Content\Css\font-awesome\.gitignore" />
+    <Content Include="Content\Css\font-awesome\.npmignore" />
+    <Content Include="Content\Css\font-awesome\bower.json" />
+    <Content Include="Content\Css\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Css\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Css\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Css\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Css\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Css\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\Css\font-awesome\less\animated.less" />
+    <Content Include="Content\Css\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\Css\font-awesome\less\core.less" />
+    <Content Include="Content\Css\font-awesome\less\extras.less" />
+    <Content Include="Content\Css\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\Css\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\Css\font-awesome\less\icons.less" />
+    <Content Include="Content\Css\font-awesome\less\larger.less" />
+    <Content Include="Content\Css\font-awesome\less\list.less" />
+    <Content Include="Content\Css\font-awesome\less\mixins.less" />
+    <Content Include="Content\Css\font-awesome\less\path.less" />
+    <Content Include="Content\Css\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\Css\font-awesome\less\spinning.less" />
+    <Content Include="Content\Css\font-awesome\less\stacked.less" />
+    <Content Include="Content\Css\font-awesome\less\variables.less" />
+    <Content Include="Content\Css\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_animated.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_core.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_extras.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_list.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_path.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\Css\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\Css\Metro\fonts\metro.eot" />
+    <Content Include="Content\Css\Metro\fonts\metro.svg" />
+    <Content Include="Content\Css\Metro\fonts\metro.ttf" />
+    <Content Include="Content\Css\Metro\fonts\metro.woff" />
+    <Content Include="master\Master.Master" />
+    <Content Include="PrinterUtility V1.0\BYNetWinConfig\BYNetPortAPI.dll" />
+    <Content Include="PrinterUtility V1.0\BYNetWinConfig\BYNetWinConfig.exe" />
+    <Content Include="PrinterUtility V1.0\BYNetWinConfig\SimpleLogModule.dll" />
+    <Content Include="PrinterUtility V1.0\lib\BackSideMessage.bmp" />
+    <Content Include="PrinterUtility V1.0\lib\bitmap.dll" />
+    <Content Include="PrinterUtility V1.0\lib\bmpdither.dll" />
+    <Content Include="PrinterUtility V1.0\lib\BYNetIO.dll" />
+    <Content Include="PrinterUtility V1.0\lib\BYNetPortAPI.dll" />
+    <Content Include="PrinterUtility V1.0\lib\ByUsbInt.dll" />
+    <Content Include="PrinterUtility V1.0\lib\ComStatusMonitor.dll" />
+    <Content Include="PrinterUtility V1.0\lib\DLPORTIO.DLL" />
+    <Content Include="PrinterUtility V1.0\lib\FrontSideMessage.bmp" />
+    <Content Include="PrinterUtility V1.0\lib\ImageFormatTrans.dll" />
+    <Content Include="PrinterUtility V1.0\lib\ImageZoom.dll" />
+    <Content Include="PrinterUtility V1.0\lib\ImageZoom1.dll" />
+    <Content Include="PrinterUtility V1.0\lib\Logo.jpg" />
+    <Content Include="PrinterUtility V1.0\lib\NibblePAR.dll" />
+    <Content Include="PrinterUtility V1.0\lib\PreDefinedData.dll" />
+    <Content Include="PrinterUtility V1.0\lib\ReprintMessage.bmp" />
+    <Content Include="PrinterUtility V1.0\lib\start.bmp" />
+    <Content Include="PrinterUtility V1.0\lib\start_invalid.bmp" />
+    <Content Include="PrinterUtility V1.0\lib\stop.bmp" />
+    <Content Include="PrinterUtility V1.0\lib\stop_invalid.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Bird.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Bird2.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\camphor.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\cat.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\chicken.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\chicken2.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\cobra.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Dragon.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\FACE.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Fish.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Fish2.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Fish3.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Fish4.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\flower.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Flowerpot.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\gHard13.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\gHard20.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\Central Logo.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\FACE.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\flower.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\Lion.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\miss you.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\Rabbit.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\SAMPLE.BMP" />
+    <Content Include="PrinterUtility V1.0\logo\Lion.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\miss you0.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\mouse.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\mouse2.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\mouse3.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\mouse4.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\pangolin.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\pangolin2.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Perfect 15.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Perfect 19.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Perfect 2.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Perfect 4.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Rabbit.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\SAMPLE.BMP" />
+    <Content Include="PrinterUtility V1.0\logo\snake.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\1_criedshy.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\1_criedshy.JPG" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\1_focuswe.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\1_focuswe.jpg" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\1_focusweTemp.bmp.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\1_orangebeelzebub.jpg" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\2_f3333cjh.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\2_f3333cjh.JPG" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\demo.exe" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\ED91.jpg" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\FACE.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\flower.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\flowerTemp.bmp.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\Lion.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\miss you.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\panda.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\panda.JPG" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\Rabbit.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\SAMPLE.BMP" />
+    <Content Include="PrinterUtility V1.0\logo\Water lilies.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\waterfall.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Xxmas06.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Xxmas13.bmp" />
+    <Content Include="PrinterUtility V1.0\logo\Xxmas14.bmp" />
+    <Content Include="PrinterUtility V1.0\Pre-Defined\Dragon.bmp" />
+    <Content Include="PrinterUtility V1.0\Pre-Defined\Water lilies.bmp" />
+    <Content Include="PrinterUtility V1.0\Pre-Defined\waterfall.bmp" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver\BYPUSB.INF" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver\Install.exe" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver_x64\BYPUSB.INF" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver_x64\Install.exe" />
+    <Content Include="PrinterUtility V1.0\Utility.exe" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\01.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\02.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\03.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\04.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\05.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\06.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\07.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\08.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\09.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\10.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\11.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\12.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\13.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\14.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\15.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\16.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\17.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\18.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\19.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\20.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\21.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\22.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\23.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\Chinese\24.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\01.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\02.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\03.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\04.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\05.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\06.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\07.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\08.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\09.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\10.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\11.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\12.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\13.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\14.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\15.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\16.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\17.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\18.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\19.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\20.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\21.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\22.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\23.wav" />
+    <Content Include="PrinterUtility V1.0\Wav\English\24.wav" />
+    <Content Include="Report\Item.xsc">
+      <DependentUpon>Item.xsd</DependentUpon>
+    </Content>
+    <Content Include="inventoryDataSet.xsc">
+      <DependentUpon>inventoryDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="dsStockReport.xsc">
+      <DependentUpon>dsStockReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="dbperiodic.xsc">
+      <DependentUpon>dbperiodic.xsd</DependentUpon>
+    </Content>
+    <Content Include="BillDataSet.xsc">
+      <DependentUpon>BillDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="BillDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="BillDataSet.xss">
+      <DependentUpon>BillDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="BillReport\Bill.xsc">
+      <DependentUpon>Bill.xsd</DependentUpon>
+    </Content>
+    <None Include="BillReport\Bill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bill.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="BillReport\Bill.xss">
+      <DependentUpon>Bill.xsd</DependentUpon>
+    </Content>
+    <Content Include="Citrus\keystore.json" />
+    <Content Include="bin\keystore.json" />
+    <None Include="dbperiodic.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbperiodic.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="dbperiodic.xss">
+      <DependentUpon>dbperiodic.xsd</DependentUpon>
+    </Content>
+    <None Include="dsStockReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStockReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="dsStockReport.xss">
+      <DependentUpon>dsStockReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="HMBS\HMBS.config" />
+    <Content Include="HMBS\Status.xsc">
+      <DependentUpon>Status.xsd</DependentUpon>
+    </Content>
+    <Content Include="HMBS\Ratio.xsc">
+      <DependentUpon>Ratio.xsd</DependentUpon>
+    </Content>
+    <None Include="HMBS\Ratio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ratio.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="HMBS\Ratio.xss">
+      <DependentUpon>Ratio.xsd</DependentUpon>
+    </Content>
+    <None Include="HMBS\Status.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Status.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="HMBS\Status.xss">
+      <DependentUpon>Status.xsd</DependentUpon>
+    </Content>
+    <None Include="inventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>inventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="inventoryDataSet.xss">
+      <DependentUpon>inventoryDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\brand.xsc">
+      <DependentUpon>brand.xsd</DependentUpon>
+    </Content>
+    <Content Include="PrinterUtility V1.0\BYNetWinConfig\BYNetWinConfig_CN.chm" />
+    <Content Include="PrinterUtility V1.0\BYNetWinConfig\BYNetWinConfig_EN.chm" />
+    <Content Include="PrinterUtility V1.0\BYNetWinConfig\LogConfig001.ini" />
+    <Content Include="PrinterUtility V1.0\BYNetWinConfig\NetSetting.ini" />
+    <Content Include="PrinterUtility V1.0\CodePage\1257.font" />
+    <Content Include="PrinterUtility V1.0\CodePage\12x24.font" />
+    <Content Include="PrinterUtility V1.0\CodePage\3.2.10 Page 16 %28WPC1252%297x9.font" />
+    <Content Include="PrinterUtility V1.0\CodePage\3.2.10 Page 16 %28WPC1252%299x9.font" />
+    <Content Include="PrinterUtility V1.0\CodePage\3.2.13 Page 19 %28PC858Euro%297x9.font" />
+    <Content Include="PrinterUtility V1.0\CodePage\771.font" />
+    <Content Include="PrinterUtility V1.0\CodePage\9x17.font" />
+    <Content Include="PrinterUtility V1.0\CodePage\Impact\PC1251_9x12.font" />
+    <Content Include="PrinterUtility V1.0\CodePage\Thermal\PC437_12x24.font" />
+    <Content Include="PrinterUtility V1.0\EepromSet\44444444444.pes" />
+    <Content Include="PrinterUtility V1.0\EepromSet\5555555.pes" />
+    <Content Include="PrinterUtility V1.0\EepromSet\aaaaaaa.pes" />
+    <Content Include="PrinterUtility V1.0\EepromSet\asd.pes" />
+    <Content Include="PrinterUtility V1.0\EepromSet\bbbbb.pes" />
+    <Content Include="PrinterUtility V1.0\EepromSet\zxc.pes" />
+    <Content Include="PrinterUtility V1.0\lib\BYNetPortAPI Guide.chm" />
+    <Content Include="PrinterUtility V1.0\lib\DLPORTIO.SYS" />
+    <Content Include="PrinterUtility V1.0\lib\Thumbs.db" />
+    <Content Include="PrinterUtility V1.0\lib\Utility.BY" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\LionTemp.bmp.bin" />
+    <Content Include="PrinterUtility V1.0\logo\Impact\Thumbs.db" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\1_focusweTemp.bmpTemp.bmp.bin" />
+    <Content Include="PrinterUtility V1.0\logo\Thermal\Thumbs.db" />
+    <Content Include="PrinterUtility V1.0\logo\Thumbs.db" />
+    <Content Include="PrinterUtility V1.0\Par1284.sys" />
+    <Content Include="PrinterUtility V1.0\par1284.vxd" />
+    <Content Include="PrinterUtility V1.0\Pre-Defined\Thumbs.db" />
+    <Content Include="PrinterUtility V1.0\Printer.ini" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\1_Supermarket.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\2Color\1_Supermarket_2Color.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\AutoBitmap\1_Auto Bitmap Printing.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\1_UPC-A.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\2_UPC-E.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\3_EAN-13.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\4_EAN-8.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\5_CODE39.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\6_ITF.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\7_CODABAR.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\8_CODE93.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\9_CODE128.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\a_PDF417.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\b_MAXICODE.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\c_QR.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Barcode\d_GS1.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Gray\1_Gray.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\Monochromatic\1_Monochromatic.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\RightSideUp\1_Supermarket_RightSideUp.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\SavePaper\1_Not save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\SavePaper\2_25%25 save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\SavePaper\3_50%25 save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\SavePaper\4_75%25 save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\SavePaper\5_100%25 save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\WaterMark\1_Watermark_blowup.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\WaterMark\2_Watermark_45degree.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3150\WaterMark\3_Watermark_145degree.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\1_Supermarket.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\2Color\1_Supermarket_2Color.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\1_UPC-A.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\2_UPC-E.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\3_EAN-13.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\4_EAN-8.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\5_CODE39.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\6_ITF.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\7_CODABAR.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\8_CODE93.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\9_CODE128.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\a_PDF417.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\b_MAXICODE.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\c_QR.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Barcode\d_GS1.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Gray\1_Gray.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\MiddlePrint\1_45mm width print.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\MiddlePrint\2_56mm width print.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\MiddlePrint\3_76mm width print.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\MiddlePrint\4_80mm width print.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\Monochromatic\1_Monochromatic.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\RightSideUp\1_Supermarket_RightSideUp.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\SavePaper\1_Not save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\SavePaper\2_25%25 save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\SavePaper\3_50%25 save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\SavePaper\4_75%25 save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\SavePaper\5_100%25 save paper.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\WaterMark\1_Watermark_blowup.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\WaterMark\2_Watermark_45degree.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\Predefined\RP3310\WaterMark\3_Watermark_145degree.prn" />
+    <Content Include="PrinterUtility V1.0\Sample\User defined\4-4..prn" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver\autoinstall.bat" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver\bypusb.cat" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver\BYPUSB.sys" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver_x64\autoinstall.bat" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver_x64\bypusb.cat" />
+    <Content Include="PrinterUtility V1.0\USBDrv\USBDriver_x64\BYPUSB.sys" />
+    <Content Include="PrinterUtility V1.0\user-defined font\Thermal\12x24.font" />
+    <Content Include="PrinterUtility V1.0\user-defined font\Thermal\9x17.font" />
+    <Content Include="PrinterUtility V1.0\UtilityHelp.chm" />
+    <Content Include="Modules\Transaction\TransactionR.xsc">
+      <DependentUpon>TransactionR.xsd</DependentUpon>
+    </Content>
+    <None Include="Modules\Transaction\TransactionR.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionR.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Modules\Transaction\TransactionR.xss">
+      <DependentUpon>TransactionR.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Report\brand.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>brand.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\brand.xss">
+      <DependentUpon>brand.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\DataSetConsumption.xsc">
+      <DependentUpon>DataSetConsumption.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\DataSetConsumption.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetConsumption.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Report\DataSetConsumption.xss">
+      <DependentUpon>DataSetConsumption.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\Item.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Item.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Item.xss">
+      <DependentUpon>Item.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\Product.xsc">
+      <DependentUpon>Product.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\Product.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Product.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Product.xss">
+      <DependentUpon>Product.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\Stock.xsc">
+      <DependentUpon>Stock.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\Stock.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stock.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Stock.xss">
+      <DependentUpon>Stock.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Modules\Product\Product.aspx" />
+    <Content Include="Report\report.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.autocomplete.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\Js\docs.js" />
+    <Content Include="Scripts\Js\ga.js" />
+    <Content Include="Scripts\Js\jquery.dataTables.min.js" />
+    <Content Include="Scripts\Js\metro.js" />
+    <Content Include="Scripts\Js\prettify\lang-apollo.js" />
+    <Content Include="Scripts\Js\prettify\lang-basic.js" />
+    <Content Include="Scripts\Js\prettify\lang-clj.js" />
+    <Content Include="Scripts\Js\prettify\lang-css.js" />
+    <Content Include="Scripts\Js\prettify\lang-dart.js" />
+    <Content Include="Scripts\Js\prettify\lang-erlang.js" />
+    <Content Include="Scripts\Js\prettify\lang-go.js" />
+    <Content Include="Scripts\Js\prettify\lang-hs.js" />
+    <Content Include="Scripts\Js\prettify\lang-lisp.js" />
+    <Content Include="Scripts\Js\prettify\lang-llvm.js" />
+    <Content Include="Scripts\Js\prettify\lang-lua.js" />
+    <Content Include="Scripts\Js\prettify\lang-matlab.js" />
+    <Content Include="Scripts\Js\prettify\lang-ml.js" />
+    <Content Include="Scripts\Js\prettify\lang-mumps.js" />
+    <Content Include="Scripts\Js\prettify\lang-n.js" />
+    <Content Include="Scripts\Js\prettify\lang-pascal.js" />
+    <Content Include="Scripts\Js\prettify\lang-proto.js" />
+    <Content Include="Scripts\Js\prettify\lang-r.js" />
+    <Content Include="Scripts\Js\prettify\lang-rd.js" />
+    <Content Include="Scripts\Js\prettify\lang-scala.js" />
+    <Content Include="Scripts\Js\prettify\lang-sql.js" />
+    <Content Include="Scripts\Js\prettify\lang-tcl.js" />
+    <Content Include="Scripts\Js\prettify\lang-tex.js" />
+    <Content Include="Scripts\Js\prettify\lang-vb.js" />
+    <Content Include="Scripts\Js\prettify\lang-vhdl.js" />
+    <Content Include="Scripts\Js\prettify\lang-wiki.js" />
+    <Content Include="Scripts\Js\prettify\lang-xq.js" />
+    <Content Include="Scripts\Js\prettify\lang-yaml.js" />
+    <Content Include="Scripts\Js\prettify\prettify.css" />
+    <Content Include="Scripts\Js\prettify\prettify.js" />
+    <Content Include="Scripts\Js\prettify\run_prettify.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="Styles\meanmenu.css" />
+    <Content Include="Styles\responsiveMenu.css" />
+    <Content Include="Styles\style1.css" />
+    <Content Include="Modules\Thershhold\Thresh.aspx" />
+    <Content Include="thermalprinter\Default.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="StockingDataSet.xsc">
+      <DependentUpon>StockingDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="StockingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="StockingDataSet.xss">
+      <DependentUpon>StockingDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="StockingItemsDataSet.xsc">
+      <DependentUpon>StockingItemsDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="StockingItemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockingItemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="StockingItemsDataSet.xss">
+      <DependentUpon>StockingItemsDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_WebReferences\Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCompleteService1.asmx.cs">
+      <DependentUpon>AutoCompleteService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BillDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BillReport\Bill.aspx.cs">
+      <DependentUpon>Bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillReport\Bill.aspx.designer.cs">
+      <DependentUpon>Bill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BillReport\Bill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Citrus\CitrusPayment.aspx.cs">
+      <DependentUpon>CitrusPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citrus\CitrusPayment.aspx.designer.cs">
+      <DependentUpon>CitrusPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citrus\javax.cs" />
+    <Compile Include="Citrus\notifyResponsePage.aspx.cs">
+      <DependentUpon>notifyResponsePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citrus\notifyResponsePage.aspx.designer.cs">
+      <DependentUpon>notifyResponsePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Citrus\ResponsePage.aspx.cs">
+      <DependentUpon>ResponsePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Citrus\ResponsePage.aspx.designer.cs">
+      <DependentUpon>ResponsePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="class\conectionstring.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dbperiodic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbperiodic.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dsStockReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsStockReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HMBS\Ratio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ratio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HMBS\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HMBS\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HMBS\Status.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Status.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="inventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="master\Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Brand\Brand.aspx.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Brand\Brand.aspx.designer.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Category\category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Category\category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Feature\Feature.aspx.cs">
+      <DependentUpon>Feature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Feature\Feature.aspx.designer.cs">
+      <DependentUpon>Feature.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="master\master.aspx.cs">
+      <DependentUpon>master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master\master.aspx.designer.cs">
+      <DependentUpon>master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Base.cs" />
+    <Compile Include="Models\BrandModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Modules\Historytransaction\Historytransaction.aspx.cs">
+      <DependentUpon>Historytransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Historytransaction\Historytransaction.aspx.designer.cs">
+      <DependentUpon>Historytransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Item\Item.aspx.cs">
+      <DependentUpon>Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Item\Item.aspx.designer.cs">
+      <DependentUpon>Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Product\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Product\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Search\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Search\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Transaction\Transaction.aspx.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Transaction\Transaction.aspx.designer.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Transaction\TransactionR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Vendor\Vendor.aspx.cs">
+      <DependentUpon>Vendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Vendor\Vendor.aspx.designer.cs">
+      <DependentUpon>Vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\brand.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>brand.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DataSetConsumption.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetConsumption.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Item.cs">
+      <DependentUpon>Item.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Item.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Item.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Product.cs">
+      <DependentUpon>Product.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Product.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Product.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\report.aspx.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\report.aspx.designer.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Stock.cs">
+      <DependentUpon>Stock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Stock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="StockingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockingItemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockingItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Thershhold\Thresh.aspx.cs">
+      <DependentUpon>Thresh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Thershhold\Thresh.aspx.designer.cs">
+      <DependentUpon>Thresh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thermalprinter\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thermalprinter\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_WebReferences\App_Code\CSCode\" />
+    <Folder Include="Content\fonts\" />
+    <Folder Include="Properties\App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.Domain\Inventory.Domain.csproj">
+      <Project>{79fa758b-4151-4127-b3c9-b75d1090d7a0}</Project>
+      <Name>Inventory.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Repository\Inventory.Repository.csproj">
+      <Project>{934fafb9-4535-4f0c-8144-af4376fb3f32}</Project>
+      <Name>Inventory.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BillReport\memo.rdlc" />
+    <EmbeddedResource Include="BillReport\bills.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMBS\Ratio.rdlc" />
+    <EmbeddedResource Include="HMBS\Report1.rdlc" />
+    <EmbeddedResource Include="Modules\Transaction\TransactionR.rdlc" />
+    <EmbeddedResource Include="Report\Consumption.rdlc" />
+    <EmbeddedResource Include="Report\Periodic.rdlc" />
+    <EmbeddedResource Include="Report\Report1.rdlc" />
+    <EmbeddedResource Include="Report\Report2.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report3.rdlc" />
+    <EmbeddedResource Include="Report\stock.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stocking.rdlc" />
+    <EmbeddedResource Include="Report\StockingItems.rdlc" />
+    <EmbeddedResource Include="Report\StockReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49594</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49594/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

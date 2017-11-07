@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetConsumption" targetNamespace="http://tempuri.org/DataSetConsumption.xsd" xmlns:mstns="http://tempuri.org/DataSetConsumption.xsd" xmlns="http://tempuri.org/DataSetConsumption.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetConsumption" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetConsumption" msprop:Generator_UserDSName="DataSetConsumption">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableConsumption" msprop:Generator_TableClassName="DataTableConsumptionDataTable" msprop:Generator_TableVarName="tableDataTableConsumption" msprop:Generator_TablePropName="DataTableConsumption" msprop:Generator_RowDeletingName="DataTableConsumptionRowDeleting" msprop:Generator_RowChangingName="DataTableConsumptionRowChanging" msprop:Generator_RowEvHandlerName="DataTableConsumptionRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableConsumptionRowDeleted" msprop:Generator_UserTableName="DataTableConsumption" msprop:Generator_RowChangedName="DataTableConsumptionRowChanged" msprop:Generator_RowEvArgName="DataTableConsumptionRowChangeEvent" msprop:Generator_RowClassName="DataTableConsumptionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductName" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" minOccurs="0" />
+              <xs:element name="Recived" msprop:Generator_ColumnVarNameInTable="columnRecived" msprop:Generator_ColumnPropNameInRow="Recived" msprop:Generator_ColumnPropNameInTable="RecivedColumn" msprop:Generator_UserColumnName="Recived" type="xs:string" minOccurs="0" />
+              <xs:element name="Consume" msprop:Generator_ColumnVarNameInTable="columnConsume" msprop:Generator_ColumnPropNameInRow="Consume" msprop:Generator_ColumnPropNameInTable="ConsumeColumn" msprop:Generator_UserColumnName="Consume" type="xs:string" minOccurs="0" />
+              <xs:element name="Remain" msprop:Generator_ColumnVarNameInTable="columnRemain" msprop:Generator_ColumnPropNameInRow="Remain" msprop:Generator_ColumnPropNameInTable="RemainColumn" msprop:Generator_UserColumnName="Remain" type="xs:string" minOccurs="0" />
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
